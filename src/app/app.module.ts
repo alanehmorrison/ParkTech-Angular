@@ -8,11 +8,13 @@ import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule }
 import { RegistrationComponent } from './Shared/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { HomeComponent } from './shared/home/home.component';
+import { LoginComponent } from './shared/login/login.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
-  { path: '**', component: HomeComponent},
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'login', component: LoginComponent},
+  { path: '**', component: HomeComponent}
 ];
 
 
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     RegistrationComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
