@@ -10,7 +10,9 @@ export class RegistrationComponent implements OnInit {
 
   private _registerForm: FormGroup;
 
-  constructor(private _form: FormBuilder) { }
+  constructor(private _form: FormBuilder) { 
+    this.createForm();
+  }
 
   ngOnInit() {
   }
