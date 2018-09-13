@@ -7,12 +7,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { RegistrationComponent } from './Shared/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
-import { LoginComponent } from './shared/login/login.component';
+import { HomeComponent } from './shared/home/home.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
-  { path: '**', component: RegistrationComponent},
-  { path: 'login', component: LoginComponent}
+  { path: '**', component: HomeComponent},
+  { path: 'home', component: HomeComponent}
 ];
 
 
@@ -21,7 +21,7 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     RegistrationComponent,
-    LoginComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
