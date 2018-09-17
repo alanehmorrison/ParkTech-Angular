@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit {
       email: new FormControl,
       username: new FormControl,
       password: new FormControl,
-      passwordConfirm: new FormControl
+      ConfirmPassword : new FormControl
     });
   }
 
