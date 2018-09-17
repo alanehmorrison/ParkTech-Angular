@@ -4,3 +4,8 @@
 .nav-btn{
     margin-right: 0.5em;
 }
+.nav-bar{
+    background-color: #763c24;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
