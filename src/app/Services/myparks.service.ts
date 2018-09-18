@@ -8,7 +8,7 @@ export class MyparksService {
 
   constructor(private _http: HttpClient) { }
 
-  getNotes(){
+  getMyParks(){
     return this._http.get(`${ApiUrl}/Myparks`, {headers: this.getHeaders() });
   }
 

@@ -8,7 +8,7 @@ export class TrailsService {
 
   constructor(private _http: HttpClient) { }
 
-  getNotes(){
+  getTrails(){
     return this._http.get(`${ApiUrl}/Trails`, {headers: this.getHeaders() });
   }
 

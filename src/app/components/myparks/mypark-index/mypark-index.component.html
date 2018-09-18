@@ -1,3 +1,10 @@
-<p>
-  mypark-index works!
-</p>
+<h1> My Parks</h1>
+<a mat-raised-button color="white">Add New Park</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columNames;"></mat-row>
+  </mat-table>
+</div>
