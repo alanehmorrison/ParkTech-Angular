@@ -11,11 +11,20 @@ import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/fo
 import { HomeComponent } from './shared/home/home.component';
 import { LoginComponent } from './shared/login/login.component';
 import { AuthService } from '../app/Shared/Services/auth.service';
+import { ParksService } from './services/parks.service';
+import { TrailsService } from './Services/trails.service';
+import { MyparksService } from './Services/myparks.service';
+import { ParkIndexComponent } from './components/parks/park-index/park-index.component';
+import { MyparkIndexComponent } from './components/myparks/mypark-index/mypark-index.component';
+import { TrailsIndexComponent } from './components/trails/trails-index/trails-index.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'parks', component: ParkIndexComponent},
+  { path: 'myparks', component: MyparkIndexComponent},
+  { path: 'trails', component: TrailsIndexComponent},
   { path: '**', component: HomeComponent}
 ];
 
@@ -26,7 +35,10 @@ const appRoutes: Routes = [
     HeaderComponent,
     RegistrationComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ParkIndexComponent,
+    MyparkIndexComponent,
+    TrailsIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +53,10 @@ const appRoutes: Routes = [
     MatInputModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    ParksService,
+    TrailsService,
+    MyparksService
   ],
   bootstrap: [AppComponent]
 })
