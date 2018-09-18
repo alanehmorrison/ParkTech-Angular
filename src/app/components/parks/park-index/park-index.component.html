@@ -8,3 +8,38 @@
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
   </mat-table>
 </div>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Park#</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{park.ParkId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Park</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{park.ParkName}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Park Cost</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{park.ParkCost}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>State</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{park.ParkState}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Phone Number</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{park.ParkPhone}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Website</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{park.ParkWesite}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>More About</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{park.ParkDescription}}</mat-cell>
+</ng-container>

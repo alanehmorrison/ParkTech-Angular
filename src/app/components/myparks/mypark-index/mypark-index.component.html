@@ -8,3 +8,23 @@
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
   </mat-table>
 </div>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{myparks.MyParkId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Park</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{myparks.ParkId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Trail</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{myparks.TrailId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{myparks.MyTrailStatus}}</mat-cell>
+</ng-container>
