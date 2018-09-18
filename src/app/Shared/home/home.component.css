@@ -6,10 +6,6 @@ body {
             rgba(240,232,216,1) 44%, 
             rgba(218,205,177,1) 89%);
     background:
-        -webkit-gradient(radial, center center, 0px, center center, 100%, 
-            color-stop(44%,rgba(240,232,216,1)), 
-            color-stop(89%,rgba(218,205,177,1)));
-    background:
         -webkit-radial-gradient(center, ellipse cover,  
             rgba(240,232,216,1) 44%,
             rgba(218,205,177,1) 89%);

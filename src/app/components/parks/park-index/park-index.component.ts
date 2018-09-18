@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ParksService } from '../../../Services/parks.service';
+import { ParksService } from '../../../services/parks.service';
 import { Park } from '../../../Shared/Models/Park';
 import { MatTableDataSource } from '../../../../../node_modules/@angular/material';
 
@@ -10,7 +10,7 @@ import { MatTableDataSource } from '../../../../../node_modules/@angular/materia
 })
 export class ParkIndexComponent implements OnInit {
 
-  columnNames = ['MyParkId', 'ParkId', 'TrailId', 'MyTrailStatus', 'TrailComment']
+  columnNames = ['ParkId', 'ParkName', 'ParkCost', 'ParkState', 'ParkPhone', 'ParkWebsite', 'ParkDescription']
   dataSource: MatTableDataSource<Park>;
 
   constructor(private _parkService: ParksService) { }

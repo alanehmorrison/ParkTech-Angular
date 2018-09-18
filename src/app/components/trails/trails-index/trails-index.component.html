@@ -1,3 +1,10 @@
-<p>
-  trails-index works!
-</p>
+<h1> Trails</h1>
+<a mat-raised-button color="white">Add New Trail</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+  </mat-table>
+</div>

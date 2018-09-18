@@ -12,9 +12,9 @@ import { MatToolbarModule,
          MatTableModule } from '@angular/material';
 import { RegistrationComponent } from './Shared/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
-import { HomeComponent } from './shared/home/home.component';
-import { LoginComponent } from './shared/login/login.component';
-import { AuthService } from '../app/Shared/Services/auth.service';
+import { HomeComponent } from './Shared/home/home.component';
+import { LoginComponent } from './Shared/login/login.component';
+import { AuthService } from '../app/Shared/services/auth.service';
 import { ParksService } from './services/parks.service';
 import { TrailsService } from './Services/trails.service';
 import { MyparksService } from './Services/myparks.service';
