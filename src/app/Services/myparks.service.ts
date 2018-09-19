@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { MyPark } from '../Shared/Models/MyPark'
+import { MyPark } from '../Shared/Models/MyPark';
 
-const ApiUrl = 'https://parksandtech.azurewebsites.net/'
+const ApiUrl = 'https://parksandtech.azurewebsites.net/api'
 
 @Injectable()
 export class MyparksService {
@@ -10,7 +10,7 @@ export class MyparksService {
   constructor(private _http: HttpClient) { }
 
   getMyParks(){
-    return this._http.get(`${ApiUrl}/Mypark`, {headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}/mypark`, {headers: this.getHeaders() });
   }
 
   createMyPark(mypark: MyPark){
