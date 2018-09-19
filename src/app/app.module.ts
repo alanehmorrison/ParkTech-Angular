@@ -21,14 +21,35 @@ import { MyparksService } from './Services/myparks.service';
 import { ParkIndexComponent } from './components/parks/park-index/park-index.component';
 import { MyparkIndexComponent } from './components/myparks/mypark-index/mypark-index.component';
 import { TrailsIndexComponent } from './components/trails/trails-index/trails-index.component';
+import { ParkCreateComponent } from './components/parks/park-create/park-create.component';
+import { MyparksCreateComponent } from './components/myparks/myparks-create/myparks-create.component';
+import { TrailsCreateComponent } from './components/trails/trails-create/trails-create.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'parks', component: ParkIndexComponent},
-  { path: 'myparks', component: MyparkIndexComponent},
-  { path: 'trails', component: TrailsIndexComponent},
+  { path: 'park', component: ParkIndexComponent},
+  { path: 'mypark', component: MyparkIndexComponent},
+  { path: 'trail', component: TrailsIndexComponent},
+  {
+    path: 'park', children: [
+      { path: '', component: ParkIndexComponent },
+      { path: 'create', component: ParkCreateComponent}
+    ]
+  },
+  {
+    path: 'trail', children: [
+      { path: '', component: TrailsIndexComponent },
+      { path: 'create', component: TrailsCreateComponent}
+    ]
+  },
+  {
+    path: 'mypark', children: [
+      { path: '', component: MyparkIndexComponent },
+      { path: 'create', component: MyparksCreateComponent}
+    ]
+  },
   { path: '**', component: HomeComponent}
 ];
 
@@ -42,7 +63,10 @@ const appRoutes: Routes = [
     LoginComponent,
     ParkIndexComponent,
     MyparkIndexComponent,
-    TrailsIndexComponent
+    TrailsIndexComponent,
+    ParkCreateComponent,
+    MyparksCreateComponent,
+    TrailsCreateComponent
   ],
   imports: [
     BrowserModule,
