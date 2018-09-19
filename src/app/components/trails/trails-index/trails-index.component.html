@@ -1,0 +1,40 @@
+<h1> Trails</h1>
+<a mat-raised-button color="white">Add New Trail</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+  </mat-table>
+</div>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Trail Number</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{trail.TrailId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Trail Name</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{trail.TrailName}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Distance</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{trail.TrailDistance}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Difficulty</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{trail.Difficulty}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Trail Status</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{trail.IsOpen}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="details">
+  <mat-header-cell *matHeaderCellDef>Park</mat-header-cell>
+  <mat-cell *matCellDef="let park">{{trail.ParkId}}</mat-cell>
+</ng-container>
