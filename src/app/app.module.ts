@@ -24,6 +24,7 @@ import { TrailsIndexComponent } from './components/trails/trails-index/trails-in
 import { ParkCreateComponent } from './components/parks/park-create/park-create.component';
 import { MyparksCreateComponent } from './components/myparks/myparks-create/myparks-create.component';
 import { TrailsCreateComponent } from './components/trails/trails-create/trails-create.component';
+import { TrailsDetailComponent } from './components/trails/trails-detail/trails-detail.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
   {
     path: 'trail', children: [
       { path: '', component: TrailsIndexComponent },
-      { path: 'create', component: TrailsCreateComponent}
+      { path: 'create', component: TrailsCreateComponent},
+      { path: 'dtail/:id', component: TrailsDetailComponent}
     ]
   },
   {
@@ -66,7 +68,8 @@ const appRoutes: Routes = [
     TrailsIndexComponent,
     ParkCreateComponent,
     MyparksCreateComponent,
-    TrailsCreateComponent
+    TrailsCreateComponent,
+    TrailsDetailComponent
   ],
   imports: [
     BrowserModule,
