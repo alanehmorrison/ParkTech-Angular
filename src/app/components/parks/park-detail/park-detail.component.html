@@ -1,0 +1,48 @@
+<h1>Details</h1>
+
+<hr>
+<div *ngIf="park">
+  <div>
+    <label for="">ParkId:</label>
+    <span>{{park.ParkId}}</span>
+  </div>
+  <div>
+      <label for="">ParkName:</label>
+      <span>{{park.ParkName}}</span>
+  </div>
+  <div>
+      <label for="">ParkCost:</label>
+      <span>{{park.ParkCost}}</span>
+  </div>
+  <div>
+      <label for="">ParkCity:</label>
+      <span>{{park.ParkCity}}</span>
+  </div>
+  <div>
+      <label for="">ParkAddress:</label>
+      <span>{{park.ParkAddress}}</span>
+  </div>
+  <div>
+      <label for="">ParkState:</label>
+      <span>{{park.ParkState}}</span>
+  </div>
+  <div>
+      <label for="">ParkZip:</label>
+      <span>{{park.ParkZip}}</span>
+  </div>
+  <div>
+      <label for="">ParkPhone:</label>
+      <span>{{park.ParkPhone}}</span>
+  </div>
+  <div>
+      <label for="">ParkWebsite:</label>
+      <span>{{park.ParkWebsite}}</span>
+  </div>
+  <div>
+      <label for="">ParkDiscription:</label>
+      <span>{{park.ParkDiscription}}</span>
+  </div>
+</div>
+
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/park">Back to List</button>

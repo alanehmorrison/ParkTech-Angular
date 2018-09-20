@@ -1,0 +1,19 @@
+.heading{
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    color: #763c24;
+}
+.main-div{
+    background-color: white;
+    opacity: 0.8;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-bottom: 20px;
+}
+.nav-btn{
+    background-color:  #763c24;
+    color: white;
+}
+a{
+    color: white;
+}

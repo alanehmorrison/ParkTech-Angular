@@ -1,8 +1,11 @@
-<h1>Create a Park.</h1>
-<hr>
-​
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  </head>
+
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="parksForm">
   <div>
+    <div class="main-div">
+        <h1 class="heading">Create a Park.</h1>
     <div>
       <mat-form-field>
         <input matInput placeholder="ParkId" formControlName="ParkId" type="ParkId" required/>
@@ -29,8 +32,14 @@
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field>
+      <!-- <mat-form-field>
         <input matInput placeholder="Park State" formControlName="ParkState" type="ParkState" required/>
+      </mat-form-field> -->
+      <mat-form-field>
+        <mat-select placeholder="State">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
@@ -53,8 +62,10 @@
         <input matInput placeholder="Park Description" formControlName="ParkDescription" type="ParkDescription" required/>
       </mat-form-field>
     </div>
+    <button mat-raised-button class="nav-btn" type="submit">Create Park</button>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Park</button>
+  </div>
+  
+  <a mat-button routerLink="/park">Back to Parks</a>
 </form>
 ​
-<a mat-button routerLink="/park">Back to Parks</a>

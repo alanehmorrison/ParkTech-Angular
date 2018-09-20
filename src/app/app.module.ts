@@ -9,7 +9,8 @@ import { MatToolbarModule,
          MatButtonModule, 
          MatFormFieldModule, 
          MatInputModule,
-         MatTableModule } from '@angular/material';
+         MatTableModule,
+         MatSelectModule, } from '@angular/material';
 import { RegistrationComponent } from './Shared/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { HomeComponent } from './Shared/home/home.component';
@@ -24,6 +25,9 @@ import { TrailsIndexComponent } from './components/trails/trails-index/trails-in
 import { ParkCreateComponent } from './components/parks/park-create/park-create.component';
 import { MyparksCreateComponent } from './components/myparks/myparks-create/myparks-create.component';
 import { TrailsCreateComponent } from './components/trails/trails-create/trails-create.component';
+import { ParkDetailComponent } from './components/parks/park-detail/park-detail.component';
+import { ParkEditComponent } from './components/parks/park-edit/park-edit.component';
+import { ParkDeleteComponent } from './components/parks/park-delete/park-delete.component';
 import { TrailsDetailComponent } from './components/trails/trails-detail/trails-detail.component';
 
 const appRoutes: Routes = [
@@ -36,7 +40,9 @@ const appRoutes: Routes = [
   {
     path: 'park', children: [
       { path: '', component: ParkIndexComponent },
-      { path: 'create', component: ParkCreateComponent}
+      { path: 'create', component: ParkCreateComponent},
+      { path: 'details/:id', component: ParkDetailComponent},
+      { path: 'delete/:id', component: ParkDeleteComponent},
     ]
   },
   {
@@ -69,6 +75,9 @@ const appRoutes: Routes = [
     ParkCreateComponent,
     MyparksCreateComponent,
     TrailsCreateComponent,
+    ParkDetailComponent,
+    ParkEditComponent,
+    ParkDeleteComponent
     TrailsDetailComponent
   ],
   imports: [
@@ -82,7 +91,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,

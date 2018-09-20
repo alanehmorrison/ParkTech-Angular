@@ -1,4 +1,7 @@
-<h1> Parks</h1>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  </head>
+<h1 class="heading"> Parks</h1>
 <a mat-raised-button color="white">Add New Park</a>
 <hr>
 
@@ -11,35 +14,35 @@
 
 <ng-container matColumnDef="details">
   <mat-header-cell *matHeaderCellDef>Park#</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkId}}</mat-cell>
+  <mat-cell *matCellDef="let park" routerLink= "/park/details/{{park.ParkId}}">{{park.ParkId}}</mat-cell>
 </ng-container>
 
 <ng-container matColumnDef="details">
   <mat-header-cell *matHeaderCellDef>Park</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkName}}</mat-cell>
+  <mat-cell *matCellDef="let park" routerLink= "/park/details/{{park.ParkId}}">{{park.ParkName}}</mat-cell>
 </ng-container>
 
 <ng-container matColumnDef="details">
   <mat-header-cell *matHeaderCellDef>Park Cost</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkCost}}</mat-cell>
+  <mat-cell *matCellDef="let park" routerLink= "/park/details/{{park.ParkId}}">{{park.ParkCost}}</mat-cell>
 </ng-container>
 
 <ng-container matColumnDef="details">
   <mat-header-cell *matHeaderCellDef>State</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkState}}</mat-cell>
+  <mat-cell *matCellDef="let park" routerLink= "/park/details/{{park.ParkId}}">{{park.ParkState}}</mat-cell>
 </ng-container>
 
 <ng-container matColumnDef="details">
   <mat-header-cell *matHeaderCellDef>Phone Number</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkPhone}}</mat-cell>
+  <mat-cell *matCellDef="let park" routerLink= "/park/details/{{park.ParkId}}">{{park.ParkPhone}}</mat-cell>
 </ng-container>
 
 <ng-container matColumnDef="details">
   <mat-header-cell *matHeaderCellDef>Website</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkWesite}}</mat-cell>
+  <mat-cell *matCellDef="let park" routerLink= "/park/details/{{park.ParkId}}">{{park.ParkWesite}}</mat-cell>
 </ng-container>
 
 <ng-container matColumnDef="details">
   <mat-header-cell *matHeaderCellDef>More About</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkDescription}}</mat-cell>
+  <mat-cell *matCellDef="let park" routerLink= "/park/details/{{park.ParkId}}">{{park.ParkDescription}}</mat-cell>
 </ng-container>
