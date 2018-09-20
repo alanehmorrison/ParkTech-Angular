@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ParksService } from '../../../services/parks.service';
+import { ParkService } from '../../../Services/park.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class ParkCreateComponent implements OnInit {
 
-  parksForm: FormGroup;
+  parkForm: FormGroup;
 
-  constructor (private _parkservice: ParksService, private _form: FormBuilder, private _router: Router) {
+  constructor (private _parkService: ParkService, private _form: FormBuilder, private _router: Router) {
     this.createForm();
   }
 
@@ -20,8 +20,8 @@ export class ParkCreateComponent implements OnInit {
   }
 
   createForm() {
-    this.parksForm = this._form.group({
-      ParkId: new FormControl,
+    this.parkForm = this._form.group({
+      ParkID: new FormControl,
       ParkName: new FormControl,
       ParkCost: new FormControl,
       ParkCity: new FormControl,
@@ -35,7 +35,7 @@ export class ParkCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    this._parkservice.createPark(this.parksForm.value).subscribe( data => {
+    this._parkService.createPark(this.parkForm.value).subscribe( data => {
       this._router.navigate(['/park']);
     });
   }

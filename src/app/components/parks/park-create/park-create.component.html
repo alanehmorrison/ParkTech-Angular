@@ -1,11 +1,11 @@
 <h1>Create a Park.</h1>
 <hr>
 ​
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="parksForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="parkForm">
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="ParkId" formControlName="ParkId" type="ParkId" required/>
+        <input matInput placeholder="ParkID" formControlName="ParkID" type="ParkID" required/>
       </mat-form-field>
     </div>
     <div>

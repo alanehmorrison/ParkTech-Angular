@@ -4,12 +4,12 @@ enum TrailDifficulty{
     Challenging
 }
 export interface Trail{
-    TrailId?: number;
-    OwnerId?: number;
+    TrailID?: number;
+    OwnerID?: number;
     TrailName: string;
     TrailDistance: number;
     Difficulty: TrailDifficulty;
     IsOpen: boolean;
-    ParkId: number;
+    ParkID: number;
     ParkName?: string;
 }

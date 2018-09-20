@@ -15,25 +15,25 @@ import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/fo
 import { HomeComponent } from './Shared/home/home.component';
 import { LoginComponent } from './Shared/login/login.component';
 import { AuthService } from '../app/Shared/services/auth.service';
-import { ParksService } from './services/parks.service';
-import { TrailsService } from './Services/trails.service';
-import { MyparksService } from './Services/myparks.service';
+import { ParkService } from './Services/park.service';
+import { TrailService } from './Services/trail.service';
+import { MyParkService } from './Services/mypark.service';
 import { ParkIndexComponent } from './components/parks/park-index/park-index.component';
-import { MyparkIndexComponent } from './components/myparks/mypark-index/mypark-index.component';
-import { TrailsIndexComponent } from './components/trails/trails-index/trails-index.component';
+import { MyParkIndexComponent } from './components/myparks/mypark-index/mypark-index.component';
+import { TrailIndexComponent } from './components/trails/trail-index/trail-index.component';
 import { ParkCreateComponent } from './components/parks/park-create/park-create.component';
-import { MyparksCreateComponent } from './components/myparks/myparks-create/myparks-create.component';
-import { TrailsCreateComponent } from './components/trails/trails-create/trails-create.component';
-import { TrailsDetailComponent } from './components/trails/trails-detail/trails-detail.component';
-import { TrailsEditComponent } from './components/trails/trails-edit/trails-edit.component';
+import { MyParkCreateComponent } from './components/myparks/mypark-create/mypark-create.component';
+import { TrailCreateComponent } from './components/trails/trail-create/trail-create.component';
+import { TrailDetailComponent } from './components/trails/trail-detail/trail-detail.component';
+import { TrailEditComponent } from './components/trails/trail-edit/trail-edit.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'park', component: ParkIndexComponent},
-  { path: 'mypark', component: MyparkIndexComponent},
-  { path: 'trail', component: TrailsIndexComponent},
+  { path: 'mypark', component: MyParkIndexComponent},
+  { path: 'trail', component: TrailIndexComponent},
   {
     path: 'park', children: [
       { path: '', component: ParkIndexComponent },
@@ -42,15 +42,15 @@ const appRoutes: Routes = [
   },
   {
     path: 'trail', children: [
-      { path: '', component: TrailsIndexComponent },
-      { path: 'create', component: TrailsCreateComponent},
-      { path: 'detail/:id', component: TrailsDetailComponent}
+      { path: '', component: TrailIndexComponent },
+      { path: 'create', component: TrailCreateComponent},
+      { path: 'detail/:id', component: TrailDetailComponent}
     ]
   },
   {
     path: 'mypark', children: [
-      { path: '', component: MyparkIndexComponent },
-      { path: 'create', component: MyparksCreateComponent}
+      { path: '', component: MyParkIndexComponent },
+      { path: 'create', component: MyParkCreateComponent}
     ]
   },
   { path: '**', component: HomeComponent}
@@ -65,13 +65,13 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     ParkIndexComponent,
-    MyparkIndexComponent,
-    TrailsIndexComponent,
+    MyParkIndexComponent,
+    TrailIndexComponent,
     ParkCreateComponent,
-    MyparksCreateComponent,
-    TrailsCreateComponent,
-    TrailsDetailComponent,
-    TrailsEditComponent
+    MyParkCreateComponent,
+    TrailCreateComponent,
+    TrailDetailComponent,
+    TrailEditComponent
   ],
   imports: [
     BrowserModule,
@@ -88,9 +88,9 @@ const appRoutes: Routes = [
   ],
   providers: [
     AuthService,
-    ParksService,
-    TrailsService,
-    MyparksService
+    ParkService,
+    TrailService,
+    MyParkService
   ],
   bootstrap: [AppComponent]
 })
