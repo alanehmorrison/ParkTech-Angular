@@ -3,38 +3,38 @@
 <hr>
 
 <div>
-  <mat-table #table [dataSource]="dataSource">
-    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  </mat-table>
+  <table mat-table [dataSource]="dataSource">
+    <tr mat-header-row *matHeaderRowDef="columnNames"></tr >
+    <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+
+    <ng-container matColumnDef="TrailId">
+      <th mat-header-cell *matHeaderCellDef>Trail Id</th>
+      <td mat-cell *matCellDef="let trail">{{trail.TrailId}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="TrailName">
+      <th mat-header-cell *matHeaderCellDef>Trail Name</th>
+      <td mat-cell *matCellDef="let trail">{{trail.TrailName}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="TrailDistance">
+      <th mat-header-cell *matHeaderCellDef>Trail Distance</th>
+      <td mat-cell *matCellDef="let trail" >{{trail.TrailDistance}}<td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Difficulty">
+      <th mat-header-cell *matHeaderCellDef>Difficulty</th>
+      <td mat-cell *matCellDef="let trail">{{trail.Difficulty}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="IsOpen">
+      <th mat-header-cell *matHeaderCellDef>Trail Status</th>
+      <td mat-cell *matCellDef="let trail">{{trail.TrailStatus}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ParkId">
+      <th mat-header-cell *matHeaderCellDef>Park</th>
+      <td mat-cell *matCellDef="let trail">{{trail.ParkId}}</td>
+    </ng-container>
+  </table>
 </div>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Trail Number</mat-header-cell>
-  <mat-cell *matCellDef="let park" routerLink="/trails/detail/{{trail.TrailId}}"></mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Trail Name</mat-header-cell>
-  <mat-cell *matCellDef="let park" routerLink="/trails/detail/{{trail.TrailName}}"></mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Distance</mat-header-cell>
-  <mat-cell *matCellDef="let park" routerLink="/trails/detail/{{trail.TrailDistance}}"></mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Difficulty</mat-header-cell>
-  <mat-cell *matCellDef="let park" routerLink="/trails/detail/{{trail.Difficulty}}"></mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Trail Status</mat-header-cell>
-  <mat-cell *matCellDef="let park" routerLink="/trails/detail/{{trail.IsOpen}}"></mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Park</mat-header-cell>
-  <mat-cell *matCellDef="let park"routerLink="/trails/detail/{{trail.ParkId}}"></mat-cell>
-</ng-container>

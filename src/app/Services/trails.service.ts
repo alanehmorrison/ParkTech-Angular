@@ -14,7 +14,7 @@ export class TrailsService {
   }
 
   getTrail(id: string){
-    return this._http.get(`${ApiUrl}/Trails/${id}`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}/trail/${id}`, { headers: this.getHeaders() });
   }
 
   createTrail(trail: Trail){
@@ -23,5 +23,9 @@ export class TrailsService {
 
   private getHeaders(){
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
+  }
+
+  updateTrail(trail: Trail){
+    return this._http.put(`${ApiUrl}/trail`, trail, {headers: this.getHeaders()});
   }
 }
