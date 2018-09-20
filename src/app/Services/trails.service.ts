@@ -13,6 +13,10 @@ export class TrailsService {
     return this._http.get(`${ApiUrl}/trail`, {headers: this.getHeaders() });
   }
 
+  getTrail(id: string){
+    return this._http.get(`${ApiUrl}/Trails/${id}`, { headers: this.getHeaders() });
+  }
+
   createTrail(trail: Trail){
     return this._http.post(`${ApiUrl}/trail`, trail, {headers: this.getHeaders()});
   }

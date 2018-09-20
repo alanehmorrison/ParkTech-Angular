@@ -28,6 +28,7 @@ import { TrailsCreateComponent } from './components/trails/trails-create/trails-
 import { ParkDetailComponent } from './components/parks/park-detail/park-detail.component';
 import { ParkEditComponent } from './components/parks/park-edit/park-edit.component';
 import { ParkDeleteComponent } from './components/parks/park-delete/park-delete.component';
+import { TrailsDetailComponent } from './components/trails/trails-detail/trails-detail.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
   {
     path: 'trail', children: [
       { path: '', component: TrailsIndexComponent },
-      { path: 'create', component: TrailsCreateComponent}
+      { path: 'create', component: TrailsCreateComponent},
+      { path: 'dtail/:id', component: TrailsDetailComponent}
     ]
   },
   {
@@ -76,6 +78,7 @@ const appRoutes: Routes = [
     ParkDetailComponent,
     ParkEditComponent,
     ParkDeleteComponent
+    TrailsDetailComponent
   ],
   imports: [
     BrowserModule,
