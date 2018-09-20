@@ -4,7 +4,7 @@
 <div *ngIf="Trail">
   <div>
     <label for="">TrailID</label>
-    <span>{{trail.TrailID}}</span>
+    <span>{{trail.TrailId}}</span>
   </div>
   <div>
     <label for="">TrailName</label>
@@ -24,7 +24,7 @@
   </div>
   <div>
     <label for="">ParkID</label>
-    <span>{{trail.ParkID}}</span>
+    <span>{{trail.ParkId}}</span>
   </div>
   <div>
     <label for="">ParkName</label>
@@ -35,3 +35,6 @@
     <span>{{trail.Park}}</span>
   </div>
 </div>
+
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/trail">Back to List</button>
