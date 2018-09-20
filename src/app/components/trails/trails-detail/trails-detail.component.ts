@@ -17,7 +17,7 @@ export class TrailsDetailComponent implements OnInit {
   ngOnInit() {
     this._activatedRoute.paramMap.subscribe(routeData => {
       this._trailsService.getTrail(routeData.get('id')).subscribe((singleTrail: Trail) =>{
-        this. trail = singleTrail;
+        this.trail = singleTrail;
       });
     });
   }
