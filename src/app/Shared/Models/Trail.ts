@@ -1,4 +1,4 @@
-enum TrailDifficulty{
+enum Difficulty{
     Easy = 1,
     Moderate,
     Challenging
@@ -8,7 +8,7 @@ export interface Trail{
     OwnerID?: number;
     TrailName: string;
     TrailDistance: number;
-    Difficulty: TrailDifficulty;
+    TrailDifficulty: Difficulty;
     IsOpen: boolean;
     ParkID: number;
     ParkName?: string;
