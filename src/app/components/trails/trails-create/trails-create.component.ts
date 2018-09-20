@@ -21,7 +21,6 @@ export class TrailsCreateComponent implements OnInit {
 
   createForm() {
     this.trailsForm = this._form.group({
-      TrailId: new FormControl,
       TrailName: new FormControl,
       TrailDistance: new FormControl,
       TrailDifficulty: new FormControl,

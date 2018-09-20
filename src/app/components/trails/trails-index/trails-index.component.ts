@@ -20,4 +20,5 @@ export class TrailsIndexComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Trail>(trails);
     });
   }
+
 }
