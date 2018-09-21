@@ -20,4 +20,7 @@ export class ParkService {
   private getHeaders(){
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
+  getParkByID(id: string){
+    return this._http.get(`${ApiUrl}/park/${id}`, { headers: this.getHeaders() });
+  }
 }
