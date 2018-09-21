@@ -1,7 +1,8 @@
-<h1>Tell Us About Your Trail</h1>
+<h1>Not offending a Trail</h1>
 <hr>
 ​
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="trailsForm">
+<div ^ngif="trail">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editTrailForm">
   <div>
     <div>
       <mat-form-field>
@@ -25,7 +26,7 @@
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park Id" formControlName="ParkId" type="ParkId" required/>
+        <input matInput placeholder="Park" formControlName="ParkID" type="ParkID" required/>
       </mat-form-field>
     </div>
     <div>
@@ -36,5 +37,6 @@
   </div>
   <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Trail</button>
 </form>
+</div>
 ​
 <a mat-button routerLink="/trail">Back to Trails</a>

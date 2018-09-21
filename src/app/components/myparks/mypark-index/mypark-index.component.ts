@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyparksService } from '../../../Services/myparks.service';
+import { MyParkService } from '../../../Services/mypark.service';
 import { MyPark } from '../../../Shared/Models/MyPark'
 import { MatTableDataSource } from '../../../../../node_modules/@angular/material';
 
@@ -9,15 +9,15 @@ import { MatTableDataSource } from '../../../../../node_modules/@angular/materia
   templateUrl: './mypark-index.component.html',
   styleUrls: ['./mypark-index.component.css']
 })
-export class MyparkIndexComponent implements OnInit {
+export class MyParkIndexComponent implements OnInit {
 
-  columnNames = ['MyParkId', 'ParkId', 'TrailId', 'MyTrailStatus', 'TrailComment']
+  columnNames = ['MyParkID', 'ParkID', 'TrailID', 'MyTrailStatus', 'TrailComment']
   dataSource: MatTableDataSource<MyPark>;
 
-  constructor(private _myparkService: MyparksService) { }
+  constructor(private _myParkService: MyParkService) { }
 
   ngOnInit() {
-    this._myparkService.getMyParks().subscribe((myparks: MyPark[]) => {
+    this._myParkService.getAllMyParks().subscribe((myparks: MyPark[]) => {
       this.dataSource = new MatTableDataSource<MyPark>(myparks);
     });
   }

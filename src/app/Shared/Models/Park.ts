@@ -3,8 +3,8 @@ enum State{
 }
 export interface Park{
     
-    ParkId?: number;
-    OwnerId?: number;
+    ParkID?: number;
+    OwnerID?: number;
     ParkName: string;
     ParkCost: number;
     ParkState: State;

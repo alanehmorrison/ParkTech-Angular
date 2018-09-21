@@ -5,15 +5,15 @@ import { Trail } from '../Shared/Models/Trail';
 const ApiUrl = 'https://parksandtech.azurewebsites.net/api'
 
 @Injectable()
-export class TrailsService {
+export class TrailService {
 
   constructor(private _http: HttpClient) { }
 
-  getTrails(){
+  getAllTrails(){
     return this._http.get(`${ApiUrl}/trail`, {headers: this.getHeaders() });
   }
 
-  getTrail(id: string){
+  getTrailByID(id: string){
     return this._http.get(`${ApiUrl}/trail/${id}`, { headers: this.getHeaders() });
   }
 

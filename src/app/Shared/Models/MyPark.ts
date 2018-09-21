@@ -7,10 +7,10 @@ enum MyTrailStatus{
     Favorite
 }
 export interface MyPark{
-    MyParkId?: number;
-    OwnerId?: number;
-    ParkId: number;
-    TrailId: number;
+    MyParkID?: number;
+    OwnerID?: number;
+    ParkID: number;
+    TrailID: number;
     MyTrailStatus: MyTrailStatus;
     Park: Park;
     Trail: Trail;
