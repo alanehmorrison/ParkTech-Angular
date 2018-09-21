@@ -23,4 +23,7 @@ export class ParkService {
   getParkByID(id: string){
     return this._http.get(`${ApiUrl}/park/${id}`, { headers: this.getHeaders() });
   }
+  updatePark(park: Park){
+    return this._http.put(`${ApiUrl}/park`, park, {headers: this.getHeaders()});
+  }
 }

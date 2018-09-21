@@ -27,6 +27,7 @@ import { TrailCreateComponent } from './components/trails/trail-create/trail-cre
 import { TrailDetailComponent } from './components/trails/trail-detail/trail-detail.component';
 import { TrailEditComponent } from './components/trails/trail-edit/trail-edit.component';
 import { ParkDetailComponent } from './components/parks/park-detail/park-detail.component';
+import { ParkEditComponent } from './components/parks/park-edit/park-edit.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
@@ -74,7 +75,8 @@ const appRoutes: Routes = [
     TrailCreateComponent,
     TrailDetailComponent,
     TrailEditComponent,
-    ParkDetailComponent
+    ParkDetailComponent,
+    ParkEditComponent
   ],
   imports: [
     BrowserModule,
