@@ -42,6 +42,8 @@ const appRoutes: Routes = [
       { path: '', component: ParkIndexComponent },
       { path: 'create', component: ParkCreateComponent},
       { path: 'detail/:id', component: ParkDetailComponent},
+      { path: 'edit/: id', component: ParkEditComponent},
+      { path: 'delete/: id', component: ParkDeleteComponent}
     ]
   },
   {
