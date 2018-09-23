@@ -21,6 +21,10 @@ export class TrailService {
     return this._http.post(`${ApiUrl}/trail`, trail, {headers: this.getHeaders()});
   }
 
+  deleteTrail(id:number){
+    return this._http.delete(`$ApiUrl}/Trails/${id}`, { headers: this.getHeaders() });
+  }
+
   private getHeaders(){
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
