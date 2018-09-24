@@ -81,8 +81,7 @@ const appRoutes: Routes = [
     TrailCreateComponent,
     TrailDetailComponent,
     TrailEditComponent,
-    NoteDeleteComponent,
-    TrailDeleteComponent
+    TrailDeleteComponent,
     ParkDetailComponent,
     ParkEditComponent,
     ParkDeleteComponent
