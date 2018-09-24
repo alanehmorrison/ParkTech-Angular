@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { MatToolbarModule,
          MatButtonModule, 
          MatFormFieldModule, 
@@ -70,6 +71,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     RegistrationComponent,
     HomeComponent,
     LoginComponent,
@@ -84,7 +86,7 @@ const appRoutes: Routes = [
     TrailDeleteComponent,
     ParkDetailComponent,
     ParkEditComponent,
-    ParkDeleteComponent
+    ParkDeleteComponent,
   ],
   imports: [
     BrowserModule,
