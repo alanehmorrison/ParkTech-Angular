@@ -23,7 +23,7 @@ export class TrailCreateComponent implements OnInit {
     this.trailForm = this._form.group({
       TrailName: new FormControl,
       TrailDistance: new FormControl,
-      Difficulty: new FormControl,
+      TrailDifficulty: new FormControl,
       IsOpen: new FormControl,
       ParkID: new FormControl,
       ParkName: new FormControl

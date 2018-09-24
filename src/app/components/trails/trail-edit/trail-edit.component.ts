@@ -33,10 +33,9 @@ export class TrailEditComponent implements OnInit {
 
   createForm(){
     this.editTrailForm = this._form.group({
-      TrailID: new FormControl(this.trail.TrailID),
       TrailName: new FormControl(this.trail.TrailName),
       TrailDistance: new FormControl(this.trail.TrailDistance),
-      Difficulty: new FormControl(this.trail.TrailDifficulty),
+      TrailDifficulty: new FormControl(this.trail.TrailDifficulty),
       IsOpen: new FormControl(this.trail.IsOpen),
       ParkID: new FormControl(this.trail.ParkID),
       ParkName: new FormControl(this.trail.ParkName)
@@ -45,10 +44,9 @@ export class TrailEditComponent implements OnInit {
 
   onSubmit(form){
     const updateTrail: Trail = {
-      TrailID: form.value.TrailID,
       TrailName: form.value.TrailName,
       TrailDistance: form.value.TrailDistance,
-      TrailDifficulty: form.value.Difficulty,
+      TrailDifficulty: form.value.TrailDifficulty,
       IsOpen: form.value.IsOpen,
       ParkID: form.value.ParkID,
       ParkName: form.value.ParkName
