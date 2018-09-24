@@ -1,8 +1,7 @@
-<h1>Tell Us About Your Trail</h1>
-<hr>
 ​
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="trailForm">
-  <div>
+  <div class="main-div">
+      <h1>Tell Us About Your Trail</h1>
     <div>
       <mat-form-field>
         <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName" required/>
@@ -33,8 +32,11 @@
         <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" required/>
       </mat-form-field>
     </div>
+    <br>
+    <button mat-raised-button class="nav-btn"type="submit" routerLink= "/trail">Create Trail</button>
+    <br>
+    <br>
+    <a mat-button routerLink="/trail">Back to Trails</a>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Trail</button>
 </form>
 ​
-<a mat-button routerLink="/trail">Back to Trails</a>
