@@ -3,7 +3,6 @@ import { MyParkService } from '../../../Services/mypark.service';
 import { MyPark } from '../../../Shared/Models/MyPark'
 import { MatTableDataSource } from '../../../../../node_modules/@angular/material';
 
-
 @Component({
   selector: 'app-mypark-index',
   templateUrl: './mypark-index.component.html',
@@ -11,7 +10,7 @@ import { MatTableDataSource } from '../../../../../node_modules/@angular/materia
 })
 export class MyParkIndexComponent implements OnInit {
 
-  columnNames = ['MyParkID', 'ParkID', 'TrailID', 'MyTrailStatus', 'TrailComment']
+  columnNames = ['ParkID', 'ParkName', 'TrailID', 'TrailName', 'MyTrailStatus', 'TrailComment']
   dataSource: MatTableDataSource<MyPark>;
 
   constructor(private _myParkService: MyParkService) { }

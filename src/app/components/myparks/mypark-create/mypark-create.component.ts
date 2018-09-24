@@ -23,11 +23,11 @@ export class MyParkCreateComponent implements OnInit {
     this.myParkForm = this._form.group({
       MyParkID: new FormControl,
       ParkID: new FormControl,
+      ParkName: new FormControl,
       TrailID: new FormControl,
+      TrailName: new FormControl,
       MyTrailStatus: new FormControl,
-      Park: new FormControl,
-      Trail: new FormControl,
-      Comments : new FormControl
+      TrailComment : new FormControl
     })
   }
 

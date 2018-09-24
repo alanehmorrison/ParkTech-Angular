@@ -31,6 +31,9 @@ import { TrailDeleteComponent } from './components/trails/trail-delete/trail-del
 import { ParkDetailComponent } from './components/parks/park-detail/park-detail.component';
 import { ParkEditComponent } from './components/parks/park-edit/park-edit.component';
 import { ParkDeleteComponent } from './components/parks/park-delete/park-delete.component';
+import { MyParkDetailComponent } from './components/myparks/mypark-detail/mypark-detail.component';
+import { MyParkEditComponent } from './components/myparks/mypark-edit/mypark-edit.component';
+import { MyParkDeleteComponent } from './components/myparks/mypark-delete/mypark-delete.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
@@ -60,7 +63,8 @@ const appRoutes: Routes = [
   {
     path: 'mypark', children: [
       { path: '', component: MyParkIndexComponent },
-      { path: 'create', component: MyParkCreateComponent}
+      { path: 'create', component: MyParkCreateComponent},
+      { path: 'detail', component: MyParkDetailComponent}
     ]
   },
   { path: '**', component: HomeComponent}
@@ -76,17 +80,20 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     ParkIndexComponent,
-    MyParkIndexComponent,
-    TrailIndexComponent,
     ParkCreateComponent,
-    MyParkCreateComponent,
+    ParkDetailComponent,
+    ParkEditComponent,
+    ParkDeleteComponent,
+    TrailIndexComponent,
     TrailCreateComponent,
     TrailDetailComponent,
     TrailEditComponent,
     TrailDeleteComponent,
-    ParkDetailComponent,
-    ParkEditComponent,
-    ParkDeleteComponent,
+    MyParkIndexComponent,
+    MyParkCreateComponent,
+    MyParkDetailComponent,
+    MyParkEditComponent,
+    MyParkDeleteComponent,
   ],
   imports: [
     BrowserModule,

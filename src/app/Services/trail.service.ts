@@ -22,7 +22,7 @@ export class TrailService {
   }
 
   deleteTrail(id:number){
-    return this._http.delete(`$ApiUrl}/Trails/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${ApiUrl}/trail/${id}`, { headers: this.getHeaders() });
   }
 
   private getHeaders(){
