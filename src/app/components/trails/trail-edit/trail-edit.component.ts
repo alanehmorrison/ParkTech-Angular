@@ -53,7 +53,7 @@ export class TrailEditComponent implements OnInit {
       ParkName: form.value.ParkName
     };
     this._trailservice.updateTrail(updateTrail).subscribe(d =>{
-      this._router.navigate(['/trails']);
+      this._router.navigate(['/trail']);
     });
   }
 }
