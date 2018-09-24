@@ -1,0 +1,41 @@
+<h1>Delete</h1>
+<h4>Are you sure you want to delete this?</h4>
+
+<hr>
+<div *ngIf="MyPark">
+  <div>
+    <label for="">ParkID</label>
+    <span>{{mypark.ParkID}}</span>
+  </div>
+  <div>
+    <label for="">ParkName</label>
+    <span>{{mypark.ParkName}}</span>
+  </div>
+  <div>
+    <label for="">Trail ID</label>
+    <span>{{mypark.TrailID}}</span>
+  </div>
+  <div>
+    <label for="">Trail Name</label>
+    <span>{{mypark.TrailName}}</span>
+  </div>
+  <div>
+    <label for="">My Trail Status</label>
+    <span>{{mypark.MyTrailStatus}}</span>
+  </div>
+  <div>
+    <label for="">Trail Comment</label>
+    <span>{{mypark.TrailComment}}</span>
+  </div>
+</div>
+
+<button mat-button color="warm" (click)="onDelete()">Delete</button>
+<button mat-button color="primary" routerLink="/mypark">Back to List</button>
+
+<ng-container matColumnDef="buttons">
+  <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+  <mat-cell *matCellDef="let mypark">
+    <i mat-icon class="material-icons" routerLink="/mypark/edit/{{mypark.MyParkID}}">edit"</i>
+    <i class="material-icons" routerLink="/mypark/delete/{{mypark.MyParkID}}">delete</i>
+  </mat-cell>
+</ng-container>

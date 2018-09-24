@@ -21,7 +21,9 @@ export class MyParkService {
     return this._http.post(`${ApiUrl}/mypark`, myPark, {headers: this.getHeaders()});
   }
 
-  deleteMyPark(){}
+  deleteMyPark(id: number){
+    return this._http.delete(`${ApiUrl}/mypark/${id}`, { headers: this.getHeaders()});
+  }
 
   updateMyPark(myPark: MyPark){
     return this._http.put(`${ApiUrl}/mypark`, myPark, { headers: this.getHeaders()});
