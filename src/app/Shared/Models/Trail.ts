@@ -6,7 +6,6 @@ enum Difficulty{
     Challenging
 }
 export interface Trail{
-    TrailID?: number;
     TrailName: string;
     TrailDistance: number;
     TrailDifficulty: Difficulty;
