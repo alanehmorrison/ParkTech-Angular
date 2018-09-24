@@ -4,8 +4,8 @@
 
 <div>
   <table mat-table [dataSource]="dataSource">
-    <tr mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
-    <td mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+    <td mat-row *matRowDef="let row; columns: columnNames;"></td>
     
     <ng-container matColumnDef="details">
       <th mat-header-cell *matHeaderCellDef>Park ID</th>

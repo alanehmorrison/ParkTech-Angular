@@ -21,6 +21,7 @@ export class MyParkService {
     return this._http.post(`${ApiUrl}/mypark`, myPark, {headers: this.getHeaders()});
   }
 
+  deleteMyPark(){}
   private getHeaders(){
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
