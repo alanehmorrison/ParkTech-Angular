@@ -1,6 +1,6 @@
 <h1>Edit a Park</h1>
 
-<div *ngIf="park">
+<div *ngIf="park" class="main-div">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editParkForm">
     <div>
       <div hidden>
