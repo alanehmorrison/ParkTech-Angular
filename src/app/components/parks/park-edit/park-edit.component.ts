@@ -45,4 +45,11 @@ export class ParkEditComponent implements OnInit {
     })
   }
 
+  onSubmit() {
+    this._parkService.updatePark(this.editParkForm.value).subscribe( data => {
+      this._router.navigate(['/park']);
+    });
+  }
+
+
 }
