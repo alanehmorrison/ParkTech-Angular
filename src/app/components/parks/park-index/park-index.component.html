@@ -1,45 +1,47 @@
 <h1> Parks</h1>
-<a mat-raised-button color="white">Add New Park</a>
+<a mat-raised-button class="nav-btn" routerLink = "/park/create">Add New Park</a>
 <hr>
 
 <div>
-  <mat-table #table [dataSource]="dataSource">
-    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  </mat-table>
+  <table mat-table [dataSource]="dataSource">
+    <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+    
+    <ng-container matColumnDef="ParkID">
+      <th mat-header-cell *matHeaderCellDef>Park#</th>
+      <td *matCellDef="let park">{{park.ParkID}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ParkName">
+      <th mat-header-cell *matHeaderCellDef>Park</th>
+      <td mat-cell *matCellDef="let park">{{park.ParkName}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ParkCost">
+      <th mat-header-cell *matHeaderCellDef>Park Cost</th>
+      <td mat-cell *matCellDef="let park">{{park.ParkCost}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ParkState">
+      <th mat-header-cell *matHeaderCellDef>State</th>
+      <td mat-cell *matCellDef="let park">{{park.ParkState}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ParkPhone">
+      <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+      <td mat-cell *matCellDef="let park">{{park.ParkPhone}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ParkWebiste">
+      <th mat-header-cell *matHeaderCellDef>Website</th>
+      <td mat-cell *matCellDef="let park">{{park.ParkWesite}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ParkDescription">
+      <th mat-header-cell *matHeaderCellDef>More About</th>
+      <td mat-cell *matCellDef="let park">{{park.ParkDescription}}</td>
+    </ng-container>
+    
+  </table>
 </div>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Park#</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkID}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Park</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkName}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Park Cost</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkCost}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>State</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkState}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Phone Number</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkPhone}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Website</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkWesite}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>More About</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{park.ParkDescription}}</mat-cell>
-</ng-container>
+  
