@@ -31,7 +31,7 @@ import { ParkDetailComponent } from './components/parks/park-detail/park-detail.
 import { ParkEditComponent } from './components/parks/park-edit/park-edit.component';
 import { ParkDeleteComponent } from './components/parks/park-delete/park-delete.component';
 import { MyParkDetailComponent } from './components/myparks/mypark-detail/mypark-detail.component';
-import { MyparkEditComponent } from './components/myparks/mypark-edit/mypark-edit.component';
+import { MyParkEditComponent } from './components/myparks/mypark-edit/mypark-edit.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
@@ -89,7 +89,7 @@ const appRoutes: Routes = [
     MyParkIndexComponent,
     MyParkCreateComponent,
     MyParkDetailComponent,
-    MyparkEditComponent,
+    MyParkEditComponent,
   ],
   imports: [
     BrowserModule,
