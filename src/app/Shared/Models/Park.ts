@@ -7,7 +7,10 @@ export interface Park{
     OwnerID?: number;
     ParkName: string;
     ParkCost: number;
+    ParkAddress: string;
+    ParkCity: string;
     ParkState: State;
+    ParkZip: number;
     ParkPhone: string;
     ParkWebsite: string;
     ParkDescription: string;
