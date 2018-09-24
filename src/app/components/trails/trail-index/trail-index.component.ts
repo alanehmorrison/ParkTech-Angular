@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class TrailIndexComponent implements OnInit {
 
-  columnNames = ['TrailID', 'TrailName', 'TrailDistance', 'Difficulty', 'IsOpen', 'ParkID']
+  columnNames = ['TrailID', 'TrailName', 'TrailDistance', 'TrailDifficulty', 'IsOpen', 'ParkID']
   dataSource: MatTableDataSource<Trail>;
 
   constructor(private _trailService: TrailService) { }
