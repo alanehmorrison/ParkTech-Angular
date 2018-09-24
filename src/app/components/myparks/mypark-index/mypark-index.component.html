@@ -3,28 +3,39 @@
 <hr>
 
 <div>
-  <mat-table #table [dataSource]="dataSource">
-    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  </mat-table>
+  <table mat-table [dataSource]="dataSource">
+    <tr mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <td mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef>Park ID</th>
+      <td mat-cell *matCellDef="let myPark">{{myparks.ParkID}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef>Park</th>
+      <td mat-cell *matCellDef="let myPark">{{myparks.ParkName}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef>Trail ID</th>
+      <td mat-cell *matCellDef="let myPark">{{myparks.TrailID}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="details">
+        <th mat-header-cell *matHeaderCellDef>Trail Name</th>
+        <td mat-cell *matCellDef="let myPark">{{myparks.TrailName}}</td>
+      </ng-container>
+
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef>Trail Status</th>
+      <td mat-cell *matCellDef="let myPark">{{myparks.MyTrailStatus}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="details">
+        <th mat-header-cell *matHeaderCellDef>Trail Comment</th>
+        <td mat-cell *matCellDef="let myPark">{{myparks.TrailComment}}</td>
+      </ng-container>
+
+  </table>
 </div>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{myparks.MyParkID}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Park</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{myparks.ParkID}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Trail</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{myparks.TrailID}}</mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="details">
-  <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
-  <mat-cell *matCellDef="let park">{{myparks.MyTrailStatus}}</mat-cell>
-</ng-container>
