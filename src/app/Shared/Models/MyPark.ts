@@ -12,4 +12,9 @@ export interface MyPark{
     ParkID: Park;
     TrailID: Trail;
     MyTrailStatus: MyTrailStatus;
+    ParkName: string;
+    TrailName: string;
+    TrailComment: string;
+    Park?: Park;
+    Trail?: Trail;
 }
