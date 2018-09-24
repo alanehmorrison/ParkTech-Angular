@@ -37,12 +37,19 @@ export class ParkEditComponent implements OnInit {
       ParkCost: new FormControl(this.park.ParkCost),
       ParkAddress: new FormControl(this.park.ParkAddress),
       ParkCity: new FormControl(this.park.ParkCity),
-      ParkStae: new FormControl(this.park.ParkState),
+      ParkState: new FormControl(this.park.ParkState),
       ParkZip: new FormControl(this.park.ParkZip),
       ParkPhone: new FormControl(this.park.ParkPhone),
       ParkWebsite: new FormControl(this.park.ParkWebsite),
       ParkDescription: new FormControl(this.park.ParkDescription)
     })
   }
+
+  onSubmit() {
+    this._parkService.updatePark(this.editParkForm.value).subscribe( data => {
+      this._router.navigate(['/park']);
+    });
+  }
+
 
 }
