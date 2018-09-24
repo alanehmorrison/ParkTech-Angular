@@ -33,6 +33,7 @@ export class TrailEditComponent implements OnInit {
 
   createForm(){
     this.editTrailForm = this._form.group({
+      TrailID: new FormControl(this.trail.TrailID),
       TrailName: new FormControl(this.trail.TrailName),
       TrailDistance: new FormControl(this.trail.TrailDistance),
       TrailDifficulty: new FormControl(this.trail.TrailDifficulty),
