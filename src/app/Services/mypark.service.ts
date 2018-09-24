@@ -13,6 +13,10 @@ export class MyParkService {
     return this._http.get(`${ApiUrl}/mypark`, {headers: this.getHeaders() });
   }
 
+  getMyParkByID(id: string){
+    return this._http.get(`${ApiUrl}/mypark/${id}`, { headers: this.getHeaders()});
+  }
+
   createMyPark(myPark: MyPark){
     return this._http.post(`${ApiUrl}/mypark`, myPark, {headers: this.getHeaders()});
   }
