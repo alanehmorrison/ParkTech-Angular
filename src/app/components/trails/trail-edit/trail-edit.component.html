@@ -1,41 +1,41 @@
 <h1>Not offending a Trail</h1>
 <hr>
 ​
-<div ^ngif="trail" class="main-div">
+<div *ngIf="trail" class="main-div">
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editTrailForm">
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName" required/>
+        <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName" >
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Trail Distance" formControlName="TrailDistance" type="TrailDistance" required/>
+        <input matInput placeholder="Trail Distance" formControlName="TrailDistance" type="TrailDistance" >
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Trail Difficulty" formControlName="TrailDifficulty" type="TrailDifficulty" required/>
+        <input matInput placeholder="Trail Difficulty" formControlName="TrailDifficulty" type="TrailDifficulty" >
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Is It Open" formControlName="IsOpen" type="IsOpen" required/>
+        <input matInput placeholder="Is It Open" formControlName="IsOpen" type="IsOpen" >
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park" formControlName="ParkID" type="ParkID" required/>
+        <input matInput placeholder="Park" formControlName="ParkID" type="ParkID" >
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" required/>
+        <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" >
       </mat-form-field>
     </div>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Trail</button>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit" (click)="onSubmit()" routerLink="/trail">Create Trail</button>
 </form>
 </div>
 ​
