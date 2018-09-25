@@ -24,8 +24,8 @@ export class MyParkEditComponent implements OnInit {
                   this._myParkService.getMyParkByID(mp.get('id')).subscribe((singleMyPark: MyPark) => {
                     this.myPark = singleMyPark;
                     this.createForm();
-                  })
-                })
+                  });
+                });
                }
 
   ngOnInit() {
@@ -33,13 +33,13 @@ export class MyParkEditComponent implements OnInit {
 
   createForm() {
     this.editMyParkForm = this._form.group({
-      MyParkID: new FormControl,
-      ParkID: new FormControl,
-      ParkName: new FormControl,
-      TrailID: new FormControl,
-      TrailName: new FormControl,
-      MyTrailStatus: new FormControl,
-      TrailComment : new FormControl 
+      MyParkID: new FormControl(this.myPark.MyParkID),
+      ParkID: new FormControl(this.myPark.ParkID),
+      ParkName: new FormControl(this.myPark.ParkName),
+      TrailID: new FormControl(this.myPark.TrailID),
+      TrailName: new FormControl(this.myPark.TrailName),
+      MyTrailStatus: new FormControl(this.myPark.MyTrailStatus),
+      TrailComment : new FormControl(this.myPark.TrailComment) 
     });
   }
 
@@ -55,7 +55,7 @@ export class MyParkEditComponent implements OnInit {
     };
     this._myParkService.updateMyPark(updateMyPark).subscribe(d =>{
       this._router.navigate(['/mypark']);
-    })
+    });
   }
 
 }

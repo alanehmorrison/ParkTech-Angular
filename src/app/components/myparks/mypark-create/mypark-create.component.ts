@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MyParkService } from '../../../Services/mypark.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Park } from 'src/app/Shared/Models/Park';
+import { ParkService } from '../../../Services/park.service';
+import { Trail } from 'src/app/Shared/Models/Trail';
+import { TrailService } from 'src/app/Services/trail.service';
 
 @Component({
   selector: 'app-mypark-create',
@@ -11,12 +15,21 @@ import { Router } from '@angular/router';
 export class MyParkCreateComponent implements OnInit {
 
   myParkForm: FormGroup;
-
-  constructor (private _myParkService: MyParkService, private _form: FormBuilder, private _router: Router) {
+  parks: Park[];
+  trails: Trail[];
+  myTrailStatus: string[] = [ 'Completed', 'Wishlist', 'Favorite']
+  
+  constructor (private _myParkService: MyParkService, private _form: FormBuilder, private _router: Router, private _parkService: ParkService, private _trailService: TrailService) {
     this.createForm();
   }
 
   ngOnInit() {
+    this._parkService.getAllParks().subscribe((parks: Park[]) => {
+      this.parks = parks
+    });
+    this._trailService.getAllTrails().subscribe((trails: Trail[]) => {
+      this.trails = trails
+    });
   }
 
   createForm() {
