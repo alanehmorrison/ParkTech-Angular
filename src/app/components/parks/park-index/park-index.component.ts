@@ -10,7 +10,7 @@ import { MatTableDataSource } from '../../../../../node_modules/@angular/materia
 })
 export class ParkIndexComponent implements OnInit {
 
-  columnNames = ['ParkID', 'ParkName', 'ParkCost', 'ParkState', 'ParkPhone', 'ParkWebsite', 'ParkDescription']
+  columnNames = ['ParkID', 'ParkName', 'ParkCost', 'ParkState', 'ParkPhone', 'ParkWebsite', 'ParkDescription', 'buttons']
   dataSource: MatTableDataSource<Park>;
 
   constructor(private _parkService: ParkService) { }

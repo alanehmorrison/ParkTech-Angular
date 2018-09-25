@@ -37,9 +37,17 @@
       <td mat-cell *matCellDef="let trail">{{trail.ParkID}}</td>
     </ng-container>
 
-    <ng-container>
+    <!-- <ng-container>
         <th mat-header-cell *matHeaderCellDef>Park</th>
        <td button>Edit</td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="buttons">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let trail">
+        <i mat-icon class="material-icons" routerLink="/trail/edit/{{trail.TrailID}}">edit</i>
+        <i class="material-icons" routerLink="/trail/delete/{{trail.TrailID}}">delete</i>
+      </td>
     </ng-container>
 
   </table>
