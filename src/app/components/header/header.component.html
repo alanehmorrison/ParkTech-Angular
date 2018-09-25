@@ -4,6 +4,11 @@
 <mat-toolbar color="primary" class="nav-bar">
   <a routerLink="/home" class="heading"><span>Parks and Tech</span></a>
   <span class="example-fill-remaining-space"></span>
-  <button mat-stroked-button class="nav-btn" routerLink="/register">Register</button>
-  <button mat-stroked-button class="nav-btn" routerLink="/login">Login</button>
+    <div *ngIf="!isLoggedIn">
+      <button mat-stroked-button class="nav-btn" routerLink="/register">Register</button>
+      <button mat-stroked-button class="nav-btn" routerLink="/login">Login</button>
+    </div>
+    <div *ngIf="isLoggedIn">
+      <button mat-stroked-button class="nav-btn" routerLink="/login">Logout</button>
+    </div>
 </mat-toolbar>

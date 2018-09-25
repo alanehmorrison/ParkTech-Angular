@@ -38,13 +38,11 @@ import { MyParkDeleteComponent } from './components/myparks/mypark-delete/mypark
 import { AboutComponent } from './components/about/about/about.component';
 import { ContactComponent } from './components/contact/contact/contact.component';
 
+
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'park', component: ParkIndexComponent},
-  { path: 'mypark', component: MyParkIndexComponent},
-  { path: 'trail', component: TrailIndexComponent},
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent},
   {

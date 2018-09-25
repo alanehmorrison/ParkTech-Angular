@@ -1,9 +1,6 @@
 .example-fill-remaining-space{
     flex: 1 1 auto;
 }
-.nav-btn{
-    margin-right: 0.5em;
-}
 .nav-bar{
     background-color: #763c24;
     font-family: 'Dancing Script', cursive;
@@ -11,5 +8,9 @@
 }
 .heading{
     text-decoration: none;
+    color: white;
+}
+h1{
+    position: relative;
     color: white;
 }
