@@ -10,7 +10,8 @@ import { MatToolbarModule,
          MatButtonModule, 
          MatFormFieldModule, 
          MatInputModule,
-         MatTableModule } from '@angular/material';
+         MatTableModule, 
+        MatSelectModule } from '@angular/material';
 import { RegistrationComponent } from './Shared/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { HomeComponent } from './Shared/home/home.component';
@@ -106,7 +107,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,
