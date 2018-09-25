@@ -1,0 +1,40 @@
+<h1>Details</h1>
+
+<hr>
+<div *ngIf="Trail" class="main-div">
+  <div>
+    <label for="">Trail ID</label>
+    <span>{{trail.TrailID}}</span>
+  </div>
+  <div>
+    <label for="">Trail Name</label>
+    <span>{{trail.TrailName}}</span>
+  </div>
+  <div>
+    <label for="">Trail Distance</label>
+    <span>{{trail.TrailDistance}}</span>
+  </div>
+  <div>
+    <label for="">Trail Difficulty</label>
+    <span>{{trail.TrailDifficulty}}</span>
+  </div>
+  <div>
+    <label for="">Is Open</label>
+    <span>{{trail.IsOpen}}</span>
+  </div>
+  <div>
+    <label for="">Park ID</label>
+    <span>{{trail.ParkID}}</span>
+  </div>
+  <div>
+    <label for="">Park Name</label>
+    <span>{{trail.ParkName}}</span>
+  </div>
+  <div>
+    <label for="">Park</label>
+    <span>{{trail.Park}}</span>
+  </div>
+</div>
+
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/trail">Back to List</button>

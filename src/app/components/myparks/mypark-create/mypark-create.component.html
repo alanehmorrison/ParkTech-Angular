@@ -1,21 +1,21 @@
 <h1> Parks You've Visited.</h1>
 <hr>
 ​
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="noteForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="myParkForm">
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="MyParkId" formControlName="MyParkId" type="MyParkId" required/>
+        <input matInput placeholder="MyParkID" formControlName="MyParkID" type="MyParkID" required/>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park Id" formControlName="ParkId" type="ParkId" required/>
+        <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID" required/>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Trail Id" formControlName="TrailId" type="TrailId" required/>
+        <input matInput placeholder="Trail ID" formControlName="TrailID" type="TrailID" required/>
       </mat-form-field>
     </div>
     <div>

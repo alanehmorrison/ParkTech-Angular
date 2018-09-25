@@ -1,0 +1,41 @@
+<h1>Not offending a Trail</h1>
+<hr>
+​
+<div ^ngif="trail" class="main-div">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editTrailForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Trail Distance" formControlName="TrailDistance" type="TrailDistance" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Trail Difficulty" formControlName="TrailDifficulty" type="Difficulty" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Is It Open" formControlName="IsOpen" type="IsOpen" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Park" formControlName="ParkID" type="ParkID" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Trail</button>
+</form>
+</div>
+​

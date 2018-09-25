@@ -1,23 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Park } from '../Shared/Models/Park'
+import { MyPark } from '../Shared/Models/MyPark';
 
 const ApiUrl = 'https://parksandtech.azurewebsites.net/api'
 
 @Injectable()
-export class ParksService {
+export class MyParkService {
 
   constructor(private _http: HttpClient) { }
 
-  getParks(){
-    return this._http.get(`${ApiUrl}/park`, {headers: this.getHeaders() });
+  getAllMyParks(){
+    return this._http.get(`${ApiUrl}/mypark`, {headers: this.getHeaders() });
   }
 
-  createPark(park: Park){
-    return this._http.post(`${ApiUrl}/park`, park, {headers: this.getHeaders()});
+  createMyPark(myPark: MyPark){
+    return this._http.post(`${ApiUrl}/mypark`, myPark, {headers: this.getHeaders()});
   }
 
   private getHeaders(){
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
 }
+
