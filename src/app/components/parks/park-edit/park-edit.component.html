@@ -1,0 +1,55 @@
+<h1>Edit a Park</h1>
+
+<div *ngIf="park" class="main-div">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editParkForm">
+    <div>
+      <div >
+        <mat-form-field>
+          <input matInput placeholder="Park Name" formControlname="ParkName" type="ParkName" >
+        </mat-form-field>
+      </div>
+      <div >
+          <mat-form-field>
+            <input matInput placeholder="Park Cost" formControlname="ParkCost" type="ParkCost">
+          </mat-form-field>
+      </div>
+      <div >
+            <mat-form-field>
+              <input matInput placeholder="Park Address" formControlname="ParkAddress" type="ParkAddress">
+            </mat-form-field>
+      </div>
+      <div >
+          <mat-form-field>
+            <input matInput placeholder="Park City" formControlname="ParkCity" type="ParkCity">
+          </mat-form-field>
+      </div>
+      <div >
+          <mat-form-field>
+            <input matInput placeholder="Park State" formControlname="ParkState" type="ParkState">
+          </mat-form-field>
+      </div>
+      <div >
+          <mat-form-field>
+            <input matInput placeholder="Park Zip" formControlname="ParkZip" type="ParkZip">
+          </mat-form-field>
+      </div>
+      <div hidden>
+          <mat-form-field>
+            <input matInput placeholder="Park Phone" formControlname="ParkPhone" type="ParkPhone">
+          </mat-form-field>
+      </div>
+      <div >
+          <mat-form-field>
+            <input matInput placeholder="Park Website" formControlname="ParkWebsite" type="ParkWebsite">
+          </mat-form-field>
+      </div>
+      <div >
+          <mat-form-field>
+            <input matInput placeholder="Park Description" formControlname="ParkDescription" type="ParkDescription">
+          </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Park</button>
+  </form>
+</div>
+

@@ -1,11 +1,11 @@
-<h1>Create a Park.</h1>
-<hr>
+
 ​
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="parksForm">
-  <div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="parkForm">
+  <div class="main-div">
+    <h1 class="main-heading">Create a Park</h1>
     <div>
       <mat-form-field>
-        <input matInput placeholder="ParkId" formControlName="ParkId" type="ParkId" required/>
+        <input matInput placeholder="ParkID" formControlName="ParkID" type="ParkID" required/>
       </mat-form-field>
     </div>
     <div>
@@ -53,8 +53,12 @@
         <input matInput placeholder="Park Description" formControlName="ParkDescription" type="ParkDescription" required/>
       </mat-form-field>
     </div>
+    <br>
+    <button mat-raised-button class="nav-btn" type="button" routerLink = "/park" (click)="onSubmit()">Create Park</button>
+    <br>
+    <br>
+    <a mat-button routerLink="/park">Back to Parks</a>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Park</button>
+  
 </form>
 ​
-<a mat-button routerLink="/park">Back to Parks</a>
