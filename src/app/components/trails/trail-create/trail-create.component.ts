@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TrailService } from '../../../Services/trail.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Park, State } from 'src/app/Shared/Models/Park';
+import { Park} from 'src/app/Shared/Models/Park';
 import { ParkService } from '../../../Services/park.service';
 
 
