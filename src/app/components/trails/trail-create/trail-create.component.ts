@@ -12,7 +12,7 @@ export class TrailCreateComponent implements OnInit {
 
   trailForm: FormGroup;
 
-  constructor (private _parkService: TrailService, private _form: FormBuilder, private _router: Router) {
+  constructor (private _trailService: TrailService, private _form: FormBuilder, private _router: Router) {
     this.createForm();
   }
 
@@ -32,7 +32,7 @@ export class TrailCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    this._parkService.createTrail(this.trailForm.value).subscribe( data => {
+    this._trailService.createTrail(this.trailForm.value).subscribe( data => {
       this._router.navigate(['/trail']);
     });
   }
