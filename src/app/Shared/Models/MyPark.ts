@@ -9,8 +9,8 @@ enum MyTrailStatus{
 export interface MyPark{
     MyParkID?: number;
     OwnerID?: number;
-    ParkID: Park;
-    TrailID: Trail;
+    ParkID: number;
+    TrailID: number;
     MyTrailStatus: MyTrailStatus;
     ParkName: string;
     TrailName: string;
