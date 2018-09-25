@@ -35,6 +35,7 @@ import { ParkDeleteComponent } from './components/parks/park-delete/park-delete.
 import { MyParkDetailComponent } from './components/myparks/mypark-detail/mypark-detail.component';
 import { MyParkEditComponent } from './components/myparks/mypark-edit/mypark-edit.component';
 import { MyParkDeleteComponent } from './components/myparks/mypark-delete/mypark-delete.component';
+import { AboutComponent } from './components/about/about/about.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
@@ -43,6 +44,7 @@ const appRoutes: Routes = [
   { path: 'park', component: ParkIndexComponent},
   { path: 'mypark', component: MyParkIndexComponent},
   { path: 'trail', component: TrailIndexComponent},
+  { path: 'about', component: AboutComponent},
   {
     path: 'park', children: [
       { path: '', component: ParkIndexComponent },
@@ -95,6 +97,7 @@ const appRoutes: Routes = [
     MyParkDetailComponent,
     MyParkEditComponent,
     MyParkDeleteComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
