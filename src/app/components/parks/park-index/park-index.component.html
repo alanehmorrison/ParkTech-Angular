@@ -6,42 +6,49 @@
   <table mat-table [dataSource]="dataSource">
     <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
     <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
-    
+
     <ng-container matColumnDef="ParkID">
       <th mat-header-cell *matHeaderCellDef>Park#</th>
-      <td *matCellDef="let park">{{park.ParkID}}</td>
+      <td mat-cell *matCellDef="let park">{{park.ParkID}}</td>
     </ng-container>
-    
+
     <ng-container matColumnDef="ParkName">
       <th mat-header-cell *matHeaderCellDef>Park</th>
       <td mat-cell *matCellDef="let park">{{park.ParkName}}</td>
     </ng-container>
-    
+
     <ng-container matColumnDef="ParkCost">
       <th mat-header-cell *matHeaderCellDef>Park Cost</th>
       <td mat-cell *matCellDef="let park">{{park.ParkCost}}</td>
     </ng-container>
-    
+
     <ng-container matColumnDef="ParkState">
       <th mat-header-cell *matHeaderCellDef>State</th>
       <td mat-cell *matCellDef="let park">{{park.ParkState}}</td>
     </ng-container>
-    
+
     <ng-container matColumnDef="ParkPhone">
       <th mat-header-cell *matHeaderCellDef>Phone Number</th>
       <td mat-cell *matCellDef="let park">{{park.ParkPhone}}</td>
     </ng-container>
-    
+
     <ng-container matColumnDef="ParkWebsite">
       <th mat-header-cell *matHeaderCellDef>Website</th>
       <td mat-cell *matCellDef="let park">{{park.ParkWebsite}}</td>
     </ng-container>
-    
+
     <ng-container matColumnDef="ParkDescription">
       <th mat-header-cell *matHeaderCellDef>More About</th>
       <td mat-cell *matCellDef="let park">{{park.ParkDescription}}</td>
     </ng-container>
-    
+
+    <ng-container matColumnDef="buttons">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let park">
+          <i mat-icon class="material-icons" routerLink="/park/edit/{{park.ParkID}}">edit</i>
+          <i class="material-icons" routerLink="/park/delete/{{park.ParkID}}">delete</i> 
+        </td>
+    </ng-container>
   </table>
 </div>
-  
+
