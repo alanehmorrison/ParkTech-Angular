@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Park, State } from '../Shared/Models/Park'
+import { Park } from '../Shared/Models/Park'
 
 const ApiUrl = 'https://parksandtech.azurewebsites.net/api'
 
