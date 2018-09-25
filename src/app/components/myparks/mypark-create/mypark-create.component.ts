@@ -17,6 +17,8 @@ export class MyParkCreateComponent implements OnInit {
   myParkForm: FormGroup;
   parks: Park[];
   trails: Trail[];
+  myTrailStatus: string[] = [ 'Completed', 'Wishlist', 'Favorite']
+  
   constructor (private _myParkService: MyParkService, private _form: FormBuilder, private _router: Router, private _parkService: ParkService, private _trailService: TrailService) {
     this.createForm();
   }

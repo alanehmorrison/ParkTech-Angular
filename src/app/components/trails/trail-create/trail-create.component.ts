@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TrailService } from '../../../Services/trail.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Park } from 'src/app/Shared/Models/Park';
+import { Park, State } from 'src/app/Shared/Models/Park';
 import { ParkService } from '../../../Services/park.service';
 
 
@@ -15,16 +15,16 @@ export class TrailCreateComponent implements OnInit {
 
   trailForm: FormGroup;
   parks: Park[];
+  isOpen: string [] = [ 'true','false'];
+  trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
   constructor(private _trailService: TrailService, private _form: FormBuilder, private _router: Router, private _parkService: ParkService) {
     this.createForm();
   }
 
   ngOnInit() {
     this._parkService.getAllParks().subscribe((parks: Park[]) => {
-      // console.log(parks);
       this.parks = parks
     });
-    
   }
 
   createForm() {

@@ -32,7 +32,9 @@
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="My Trail Status" formControlName="MyTrailStatus" type="MyTrailStatus" required/>
+        <mat-select placeholder="My Trail Status" formControlName="MyTrailStatus" required>
+          <mat-option *ngFor="let myTrailStatus of myTrailStatus" [value]="myTrailStatus">{{myTrailStatus}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
