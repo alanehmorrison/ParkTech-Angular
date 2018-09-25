@@ -30,7 +30,9 @@
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park State" formControlName="ParkState" type="ParkState" required/>
+        <mat-select placeholder="Park State" formControlName="ParkState" required>
+          <mat-option *ngFor="let parkstates of states"[value]="parkstates">{{parkstates}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
