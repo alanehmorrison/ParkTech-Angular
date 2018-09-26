@@ -2,7 +2,7 @@
     flex: 1 1 auto;
 }
 .nav-bar{
-    background-color: #763c24;
+    background-color: #012779;
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
 }
@@ -17,13 +17,7 @@ h1{
     color: white;
 }
 .btn-group button {
-    position: relative;
-    background-color: rgb(179, 91, 54); /* Green background */
-    border: 2px solid black; /* Green border */
-    color: black; /* White text */
-    padding: 2px 12px 2px; /* Some padding */
-    border-radius: .2em;
-    cursor: pointer; /* Pointer/hand icon */
+  
     float: left; /* Float the buttons side by side */
 }
 
@@ -41,6 +35,24 @@ h1{
 /* Add a background color on hover */
 .btn-group button:hover {
     background-color: #ddeedd;
+}
+
+#parktechlogo{
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+#logout{
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
 }
 
 
