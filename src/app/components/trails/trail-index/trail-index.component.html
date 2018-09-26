@@ -1,9 +1,9 @@
 <h1>Trails</h1>
 
 <a mat-raised-button class="nav-btn" routerLink="/trail/create">Add New Trail</a>
-<hr>
 
-<div class="indexbody">
+
+<div class="trail-index">
   <table mat-table [dataSource]="dataSource">
     <tr mat-header-row *matHeaderRowDef="columnNames"></tr >
     <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
