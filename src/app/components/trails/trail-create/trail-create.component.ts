@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { TrailService } from '../../../Services/trail.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Park} from 'src/app/Shared/Models/Park';
+import { ParkService } from '../../../Services/park.service';
+
 
 @Component({
   selector: 'app-trail-create',
@@ -11,12 +14,17 @@ import { Router } from '@angular/router';
 export class TrailCreateComponent implements OnInit {
 
   trailForm: FormGroup;
-
-  constructor (private _trailService: TrailService, private _form: FormBuilder, private _router: Router) {
+  parks: Park[];
+  isOpen: string [] = [ 'true','false'];
+  trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
+  constructor(private _trailService: TrailService, private _form: FormBuilder, private _router: Router, private _parkService: ParkService) {
     this.createForm();
   }
 
   ngOnInit() {
+    this._parkService.getAllParks().subscribe((parks: Park[]) => {
+      this.parks = parks
+    });
   }
 
   createForm() {
@@ -27,12 +35,12 @@ export class TrailCreateComponent implements OnInit {
       IsOpen: new FormControl,
       ParkID: new FormControl,
       ParkName: new FormControl
-    
+
     })
   }
 
   onSubmit() {
-    this._trailService.createTrail(this.trailForm.value).subscribe( data => {
+    this._trailService.createTrail(this.trailForm.value).subscribe(data => {
       this._router.navigate(['/trail']);
     });
   }

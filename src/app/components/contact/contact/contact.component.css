@@ -1,0 +1,11 @@
+#contact{
+    /* border: 2px solid black; */
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
+    opacity: 0.8;
+    font-family: sans-serif;
+}
