@@ -8,6 +8,10 @@
     <div *ngIf="!isLoggedIn">
       <button mat-stroked-button routerLink="/register">Register</button>
       <button mat-stroked-button routerLink="/login">Login</button>
+
+      <div>
+          <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
+      </div>
     </div>
     
   <div *ngIf="isLoggedIn">
