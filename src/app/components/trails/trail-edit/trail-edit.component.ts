@@ -33,6 +33,7 @@ export class TrailEditComponent implements OnInit {
 
   createForm(){
     this.editTrailForm = this._form.group({
+
       TrailName: new FormControl(this.trail.TrailName),
       TrailDistance: new FormControl(this.trail.TrailDistance),
       TrailDifficulty: new FormControl(this.trail.TrailDifficulty),
@@ -44,6 +45,7 @@ export class TrailEditComponent implements OnInit {
 
   onSubmit(form){
     const updateTrail: Trail = {
+      TrailID: this.trail.TrailID,
       TrailName: form.value.TrailName,
       TrailDistance: form.value.TrailDistance,
       TrailDifficulty: form.value.TrailDifficulty,
@@ -52,7 +54,7 @@ export class TrailEditComponent implements OnInit {
       ParkName: form.value.ParkName
     };
     this._trailservice.updateTrail(updateTrail).subscribe(d =>{
-      this._router.navigate(['/trail']);
+      // this._router.navigate(['/trail']);
     });
   }
 }
