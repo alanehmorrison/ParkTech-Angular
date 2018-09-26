@@ -1,30 +1,40 @@
-<h1> Parks You've Visited.</h1>
+<h1>Parks You've Visited</h1>
 <hr> ​
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="myParkForm">
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID" required/>
+        <mat-select placeholder="Park ID" formControlName="ParkID" required>
+          <mat-option *ngFor="let parkId of parks" [value]="parkId.ParkID">{{parkId.ParkID}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" required/>
+        <mat-select placeholder="Park Name" formControlName="ParkName" required>
+          <mat-option *ngFor="let parkname of parks" [value]="parkname.ParkName">{{parkname.ParkName}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Trail ID" formControlName="TrailID" type="TrailID" required/>
+        <mat-select placeholder="Trail ID" formControlName="TrailID" required>
+          <mat-option *ngFor="let trailId of trails" [value]="trailId.TrailID">{{trailId.TrailID}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName" required/>
+        <mat-select placeholder="Trail Name" formControlName="TrailName" required>
+          <mat-option *ngFor="let trailname of trails" [value]="trailname.TrailName">{{trailname.TrailName}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="My Trail Status" formControlName="MyTrailStatus" type="MyTrailStatus" required/>
+        <mat-select placeholder="My Trail Status" formControlName="MyTrailStatus" required>
+          <mat-option *ngFor="let myTrailStatus of myTrailStatus" [value]="myTrailStatus">{{myTrailStatus}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>

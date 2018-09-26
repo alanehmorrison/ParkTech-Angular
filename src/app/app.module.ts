@@ -10,7 +10,8 @@ import { MatToolbarModule,
          MatButtonModule, 
          MatFormFieldModule, 
          MatInputModule,
-         MatTableModule } from '@angular/material';
+         MatTableModule, 
+        MatSelectModule } from '@angular/material';
 import { RegistrationComponent } from './Shared/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { HomeComponent } from './Shared/home/home.component';
@@ -34,14 +35,16 @@ import { ParkDeleteComponent } from './components/parks/park-delete/park-delete.
 import { MyParkDetailComponent } from './components/myparks/mypark-detail/mypark-detail.component';
 import { MyParkEditComponent } from './components/myparks/mypark-edit/mypark-edit.component';
 import { MyParkDeleteComponent } from './components/myparks/mypark-delete/mypark-delete.component';
+import { AboutComponent } from './components/about/about/about.component';
+import { ContactComponent } from './components/contact/contact/contact.component';
+
 
 const appRoutes: Routes = [
   { path: 'register', component: RegistrationComponent},
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'park', component: ParkIndexComponent},
-  { path: 'mypark', component: MyParkIndexComponent},
-  { path: 'trail', component: TrailIndexComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent},
   {
     path: 'park', children: [
       { path: '', component: ParkIndexComponent },
@@ -94,6 +97,8 @@ const appRoutes: Routes = [
     MyParkDetailComponent,
     MyParkEditComponent,
     MyParkDeleteComponent,
+    AboutComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -106,7 +111,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,

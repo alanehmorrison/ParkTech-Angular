@@ -1,9 +1,6 @@
 .example-fill-remaining-space{
     flex: 1 1 auto;
 }
-.nav-btn{
-    margin-right: 0.5em;
-}
 .nav-bar{
     background-color: #763c24;
     font-family: 'Dancing Script', cursive;
@@ -12,4 +9,39 @@
 .heading{
     text-decoration: none;
     color: white;
+    align-content: center;
+    margin-left: 40%;
 }
+h1{
+    position: relative;
+    color: white;
+}
+.btn-group button {
+    position: relative;
+    background-color: rgb(179, 91, 54); /* Green background */
+    border: 2px solid black; /* Green border */
+    color: black; /* White text */
+    padding: 2px 12px 2px; /* Some padding */
+    border-radius: .2em;
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #ddeedd;
+}
+
+
+    
