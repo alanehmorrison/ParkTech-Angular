@@ -22,7 +22,7 @@ export class TrailDeleteComponent implements OnInit {
 
   onDelete() {
     this._trailService.deleteTrail(this.trail.TrailID).subscribe(() => {
-      this._router.navigate(['/trails']);
+      this._router.navigate(['/trail']);
     });
   }
 
