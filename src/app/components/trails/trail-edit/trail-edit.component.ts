@@ -18,10 +18,9 @@ export class TrailEditComponent implements OnInit {
   parks: Park[];
   isOpen: string [] = [ 'true','false'];
   editTrailForm: FormGroup;
-  // CurrentTrailDifficulty=  this.trail.TrailDifficulty;
   trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
   trailDifficultyEnum: Difficulty;
-  // intitialVal = this.trailDifficultyEnum[this.trailDifficultyEnum[this.trail.TrailDifficulty].value];
+  intitialVal: string | null;
 
   constructor(private _form: FormBuilder,
               private _trailservice: TrailService,
@@ -31,6 +30,7 @@ export class TrailEditComponent implements OnInit {
                 this._ar.paramMap.subscribe(p =>{
                   this._trailservice.getTrailByID(p.get('id')).subscribe((singleTrail: Trail) => {
                     this.trail = singleTrail;
+                    this.intitialVal = Difficulty[singleTrail.TrailDifficulty];
                     this.createForm();
                   });
                 });

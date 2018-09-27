@@ -1,9 +1,9 @@
 import { Park } from "./Park";
 
 export enum Difficulty{
-    Easy,
-    Moderate,
-    Challenging,
+    Easy = 1,
+    Moderate = 2,
+    Challenging = 3,
 }
 
 export interface Trail{
