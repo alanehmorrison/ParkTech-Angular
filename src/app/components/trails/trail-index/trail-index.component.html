@@ -22,9 +22,9 @@
       <td mat-cell *matCellDef="let trail" >{{trail.TrailDistance}}<td>
     </ng-container>
     
-    <ng-container matColumnDef="TrailDifficulty">
+    <ng-container matColumnDef="enumDisplay">
       <th mat-header-cell *matHeaderCellDef>Trail Difficulty</th>
-      <td mat-cell *matCellDef="let trail">{{Difficulty[trail.TrailDifficulty]}}</td>
+      <td mat-cell *matCellDef="let trail">{{trail.enumDisplay}}</td>
     </ng-container>
     
     <ng-container matColumnDef="IsOpen">

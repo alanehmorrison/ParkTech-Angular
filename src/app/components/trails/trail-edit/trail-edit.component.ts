@@ -20,7 +20,7 @@ export class TrailEditComponent implements OnInit {
   editTrailForm: FormGroup;
   trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
   trailDifficultyEnum: Difficulty;
-  intitialVal: string | null;
+  initialVal: string | null;
 
   constructor(private _form: FormBuilder,
               private _trailservice: TrailService,
@@ -30,7 +30,7 @@ export class TrailEditComponent implements OnInit {
                 this._ar.paramMap.subscribe(p =>{
                   this._trailservice.getTrailByID(p.get('id')).subscribe((singleTrail: Trail) => {
                     this.trail = singleTrail;
-                    this.intitialVal = Difficulty[singleTrail.TrailDifficulty];
+                    this.initialVal = Difficulty[singleTrail.TrailDifficulty];
                     this.createForm();
                   });
                 });
