@@ -67,7 +67,9 @@ const appRoutes: Routes = [
     path: 'mypark', children: [
       { path: '', component: MyParkIndexComponent },
       { path: 'create', component: MyParkCreateComponent},
-      { path: 'detail', component: MyParkDetailComponent}
+      { path: 'detail/:id', component: MyParkDetailComponent},
+      { path: 'edit/:id', component: MyParkEditComponent},
+      { path: 'delete//:id', component: MyParkDeleteComponent}
     ]
   },
   { path: '**', component: HomeComponent}
