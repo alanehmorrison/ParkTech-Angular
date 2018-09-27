@@ -1,5 +1,5 @@
 <h1>Edit Trail</h1>
-​
+
 <div *ngIf="trail" class="main-div">
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editTrailForm">
   <div>
@@ -15,25 +15,35 @@
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Trail Difficulty" formControlName="TrailDifficulty" type="TrailDifficulty" >
+        <mat-select [placeholder]="trail.TrailDifficulty" formControlName="TrailDifficulty" required>
+          <mat-option *ngFor="let trailDifficulty of trailDifficulty" [value]="trailDifficulty">{{trailDifficulty}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Is It Open" formControlName="IsOpen" type="IsOpen" >
+        <mat-select [placeholder]="trail.IsOpen" formControlName="IsOpen" required>
+          <mat-option *ngFor="let isOpen of isOpen" [value]="isOpen">{{isOpen}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park" formControlName="ParkID" type="ParkID" >
+          <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID" >
+        <!-- <mat-select placeholder="Park ID" formControlName="ParkID"  required>
+          <mat-option *ngFor="let parkID of parks" [value]="parkID.ParkID">{{parkID.ParkID}}</mat-option>
+        </mat-select> -->
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" >
+          <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" >
+        <!-- <mat-select placeholder="Park Name" formControlName="ParkName"  required>
+          <mat-option *ngFor="let parkname of parks" [value]="parkname.ParkName">{{parkname.ParkName}}</mat-option>
+        </mat-select> -->
       </mat-form-field>
     </div>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" >Update Trail</button>
+  <button mat-raised-button class="nav-btn" color="primary" routerLink="/trail" >Update Trail</button>
 </form>
 </div>

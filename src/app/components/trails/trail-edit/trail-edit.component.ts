@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, FormControl } from 'node_modules/@angular/forms
 import { Trail } from '../../../Shared/Models/Trail';
 import { TrailService } from '../../../Services/trail.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Park } from '../../../Shared/Models/Park';
 
 @Component({
   selector: 'app-trail-edit',
@@ -13,7 +14,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class TrailEditComponent implements OnInit {
 
   trail: Trail;
-
+  parks: Park[];
+  isOpen: string [] = [ 'true','false'];
+  trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
   editTrailForm: FormGroup;
 
   constructor(private _form: FormBuilder,

@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class TrailDetailComponent implements OnInit {
 
   trail: Trail;
-
+  
   constructor(private _activatedRoute: ActivatedRoute, private _trailService: TrailService) { }
 
   ngOnInit() {
