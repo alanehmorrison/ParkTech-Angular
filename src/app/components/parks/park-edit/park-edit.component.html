@@ -26,6 +26,9 @@
       <div >
           <mat-form-field>
             <input matInput placeholder="Park State" formControlname="ParkState" type="ParkState" [value]="park.ParkState">
+            <mat-select placeholder="Park State" formControlName="ParkState" required>
+              <mat-option *ngFor="let parkstates of states"[value]="parkstates">{{parkstates}}</mat-option>
+            </mat-select>
           </mat-form-field>
       </div>
       <div >
@@ -52,4 +55,3 @@
     <button mat-raised-button class="nav-btn" color="primary" routerLink="/park">Update Park</button>
   </form>
 </div>
-

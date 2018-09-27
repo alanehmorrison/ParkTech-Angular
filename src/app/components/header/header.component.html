@@ -1,26 +1,30 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 </head>
-<mat-toolbar color="primary" class="nav-bar">
-    <div *ngIf="!isLoggedIn">
-      <button mat-stroked-button routerLink="/register" class="buttons">Register</button>
-      <button mat-stroked-button routerLink="/login" class="buttons">Login</button>
 
+<mat-toolbar color="primary" class="nav-bar">
+  <div *ngIf="!isLoggedIn">
+    <button mat-stroked-button routerLink="/register" class="buttons">Register</button>
+    <button mat-stroked-button routerLink="/login" class="buttons">Login</button>
+
+    <div>
+      <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
+    </div>
+  </div>
+
+  <div *ngIf="isLoggedIn">
+    <div class="btn-group">
+      <span> <button id="park" mat-stroked-button color="white" class="home-page-button" routerLink="/park"> PARKS </button></span>
+
+      <span> <button id="trail" mat-stroked-button color="white" class="home-page-button" routerLink="/trail">TRAILS</button></span>
+      <span> <button id="mypark" mat-stroked-button color="white" class="home-page-button" routerLink="/mypark"> MYPARK</button></span>
       <div>
-          <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
+        <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
+      </div>
+      <div>
+        <button id="logout" mat-stroked-button (click)="onLoggout()">Logout</button>
       </div>
     </div>
-    
-  <div *ngIf="isLoggedIn">
-  <div class="btn-group">
-      <span> <button id="park" mat-stroked-button color="white" class="home-page-button" routerLink="/park"> PARKS </button></span>
-     <span> <button id="trail" mat-stroked-button color="white" class="home-page-button" routerLink="/trail" >TRAILS</button></span>
-     <span> <button id="mypark" mat-stroked-button color="white" class="home-page-button" routerLink="/mypark" > MYPARK</button></span>
-    <div>
-     <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
     </div>
-  </div>
-  </div>
-   <button *ngIf="isLoggedIn" id="logout" mat-stroked-button routerLink="/login">LOGOUT</button>
 </mat-toolbar>
 <span class="example-fill-remaining-space"></span>

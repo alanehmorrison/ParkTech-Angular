@@ -47,10 +47,12 @@ h1{
 }
 
 #logout{
+    margin: 0;
     position: absolute;
     top: 5%;
     left: 95%;
     margin-right: -50%;
+
     transform: translate(-50%, -50%) ;
     margin-bottom: 10px;
 }
@@ -61,5 +63,3 @@ h1{
     margin-right: 10px;
 }
 
-
-    

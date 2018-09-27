@@ -8,6 +8,7 @@ import { MatTableDataSource } from '../../../../../node_modules/@angular/materia
   templateUrl: './mypark-index.component.html',
   styleUrls: ['./mypark-index.component.css']
 })
+
 export class MyParkIndexComponent implements OnInit {
 
   columnNames = ['ParkName', 'TrailID', 'TrailName', 'MyTrailStatus', 'TrailComment']
@@ -22,5 +23,4 @@ export class MyParkIndexComponent implements OnInit {
       console.log(myPark)
     });
   }
-
 }

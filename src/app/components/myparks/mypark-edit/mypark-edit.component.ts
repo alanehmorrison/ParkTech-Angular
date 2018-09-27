@@ -57,5 +57,4 @@ export class MyParkEditComponent implements OnInit {
       this._router.navigate(['/mypark']);
     });
   }
-
 }
