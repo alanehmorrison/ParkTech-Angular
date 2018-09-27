@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './trail-delete.component.html',
   styleUrls: ['./trail-delete.component.css']
 })
+
 export class TrailDeleteComponent implements OnInit {
 
   trail: Trail;

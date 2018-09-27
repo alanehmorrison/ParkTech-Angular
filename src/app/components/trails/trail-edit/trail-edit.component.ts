@@ -10,6 +10,7 @@ import { Park } from '../../../Shared/Models/Park';
   templateUrl: './trail-edit.component.html',
   styleUrls: ['./trail-edit.component.css']
 })
+
 export class TrailEditComponent implements OnInit {
 
   trail: Trail;
@@ -57,7 +58,6 @@ export class TrailEditComponent implements OnInit {
       ParkName: form.value.ParkName
     };
     this._trailservice.updateTrail(updateTrail).subscribe(d =>{
-      // this._router.navigate(['/trail']);
     });
   }
 }

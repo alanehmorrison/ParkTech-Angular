@@ -11,6 +11,7 @@ import { ParkService } from '../../../Services/park.service';
   templateUrl: './trail-create.component.html',
   styleUrls: ['./trail-create.component.css']
 })
+
 export class TrailCreateComponent implements OnInit {
 
   trailForm: FormGroup;
@@ -44,5 +45,4 @@ export class TrailCreateComponent implements OnInit {
       this._router.navigate(['/trail']);
     });
   }
-
 }

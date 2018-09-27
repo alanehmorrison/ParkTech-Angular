@@ -30,8 +30,8 @@ export class HeaderComponent implements OnInit {
   }
   
 }
+
 export interface UserData  {
   user: string;
   isloggedin: boolean;
 }
-
