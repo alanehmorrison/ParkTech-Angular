@@ -1,7 +1,7 @@
 <h1> My Parks</h1>
-<a mat-raised-button class="nav-btn" color="white" routerLink="/mypark/create"> Add New Park</a>
+<a mat-raised-button color="white" routerLink="/mypark/create"> Add New Park</a>
 
-  <div class="main-div">
+  <div class="main-div main-div2">
     <table mat-table [dataSource]="dataSource">
       <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
     <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
