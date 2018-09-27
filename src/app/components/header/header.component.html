@@ -23,7 +23,7 @@
      <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
     </div>
     </div>
-      <button id="logout" mat-stroked-button routerLink="/login">Logout</button>
+      <button id="logout" mat-stroked-button (click)="onLoggout()">Logout</button>
     </div>
 </mat-toolbar>
 <span class="example-fill-remaining-space"></span>
