@@ -16,7 +16,7 @@ import { RegistrationComponent } from './Shared/registration/registration.compon
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { HomeComponent } from './Shared/home/home.component';
 import { LoginComponent } from './Shared/login/login.component';
-import { AuthService } from '../app/Shared/services/auth.service';
+import { AuthService } from '../app/Shared/Services/auth.service';
 import { ParkService } from './Services/park.service';
 import { TrailService } from './Services/trail.service';
 import { MyParkService } from './Services/mypark.service';

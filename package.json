@@ -1,9 +1,12 @@
 {
   "name": "parks-tech",
   "version": "0.0.0",
+  "engines": {
+    "node": "8.11.3"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "serve -s dist/parks-tech",
+    "start": "serve -s dist/Parks-Tech",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
