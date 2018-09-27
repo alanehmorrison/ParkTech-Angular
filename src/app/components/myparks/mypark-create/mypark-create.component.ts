@@ -49,5 +49,4 @@ export class MyParkCreateComponent implements OnInit {
       this._router.navigate(['/mypark']);
     });
   }
-
 }

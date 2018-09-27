@@ -9,7 +9,7 @@
 .heading{
     text-decoration: none;
     color: white;
-    align-content: center;
+    padding-bottom: 20px;
     margin-left: 40%;
 }
 h1{
@@ -52,8 +52,14 @@ h1{
     top: 5%;
     left: 95%;
     margin-right: -50%;
-    transform: translate(-50%, -50%) 
+
+    transform: translate(-50%, -50%) ;
+    margin-bottom: 10px;
+}
+.buttons{
+    margin-right: 10px;
+}
+.btn-group button{
+    margin-right: 10px;
 }
 
-
-    

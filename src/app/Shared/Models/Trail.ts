@@ -1,10 +1,16 @@
 import { Park } from "./Park";
 
 enum Difficulty{
-    Easy = 1,
+    Easy,
     Moderate,
-    Challenging
+    Challenging,
 }
+
+let DifficultyDisplay: { [index: number]: string} = {};
+DifficultyDisplay[Difficulty.Easy] = "Easy";
+DifficultyDisplay[Difficulty.Moderate] = "Moderate";
+DifficultyDisplay[Difficulty.Challenging] = "Challenging";
+
 export interface Trail{
     TrailID?: number;
     TrailName: string;

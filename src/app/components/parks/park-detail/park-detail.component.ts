@@ -21,5 +21,4 @@ export class ParkDetailComponent implements OnInit {
       });
     });
   }
-
 }

@@ -37,7 +37,7 @@ export class AuthService {
     return this._http.get(`${ApiUrl}/api/Account//UserInfo`, {headers: this.setHeader() });
   }
 
-  logout() {
+  logout(): Observable<Object> {
     localStorage.clear();
     this.isLoggedIn.next(false);
 
