@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './park-create.component.html',
   styleUrls: ['./park-create.component.css']
 })
+
 export class ParkCreateComponent implements OnInit {
 
   parkForm: FormGroup;
@@ -42,6 +43,4 @@ export class ParkCreateComponent implements OnInit {
       this._router.navigate(['/park']);
     });
   }
-
-
 }

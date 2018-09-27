@@ -26,8 +26,8 @@ export class HeaderComponent implements OnInit {
     this.authService.logout();
   }
 }
+
 export interface UserData  {
   user: string;
   isloggedin: boolean;
 }
-

@@ -8,6 +8,7 @@ import { Park } from '../../../Shared/Models/Park';
   templateUrl: './park-delete.component.html',
   styleUrls: ['./park-delete.component.css']
 })
+
 export class ParkDeleteComponent implements OnInit {
 
   park: Park;
@@ -26,5 +27,4 @@ export class ParkDeleteComponent implements OnInit {
       this._router.navigate(['/park']);
     });
   }
-
 }

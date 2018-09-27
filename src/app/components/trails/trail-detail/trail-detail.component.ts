@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './trail-detail.component.html',
   styleUrls: ['./trail-detail.component.css']
 })
+
 export class TrailDetailComponent implements OnInit {
 
   trail: Trail;
@@ -21,5 +22,4 @@ export class TrailDetailComponent implements OnInit {
       });
     });
   }
-
 }

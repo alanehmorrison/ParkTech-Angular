@@ -8,6 +8,7 @@ import { MatTableDataSource } from '@angular/material';
   templateUrl: './trail-index.component.html',
   styleUrls: ['./trail-index.component.css']
 })
+
 export class TrailIndexComponent implements OnInit {
 
   columnNames = ['TrailID', 'TrailName', 'TrailDistance', 'TrailDifficulty', 'IsOpen', 'ParkID', 'buttons']
@@ -20,5 +21,4 @@ export class TrailIndexComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Trail>(trails);
     });
   }
-
 }

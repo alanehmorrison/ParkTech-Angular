@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '../../../../../node_modules/@angular/rou
   templateUrl: './park-edit.component.html',
   styleUrls: ['./park-edit.component.css']
 })
+
 export class ParkEditComponent implements OnInit {
 
   park: Park;
@@ -50,6 +51,4 @@ export class ParkEditComponent implements OnInit {
       this._router.navigate(['/park']);
     });
   }
-
-
 }

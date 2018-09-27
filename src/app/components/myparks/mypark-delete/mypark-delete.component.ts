@@ -28,5 +28,4 @@ export class MyParkDeleteComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
