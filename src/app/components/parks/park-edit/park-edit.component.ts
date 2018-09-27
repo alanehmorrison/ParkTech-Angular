@@ -23,8 +23,8 @@ export class ParkEditComponent implements OnInit {
       this._parkService.getParkByID(p.get('id')).subscribe((singlePark: Park) =>{
         this.park = singlePark;
         this.createForm();
-      })
-    })            
+      });
+    });            
    }
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class ParkEditComponent implements OnInit {
 
   createForm(){
     this.editParkForm = this._form.group({
-      ParkID: new FormControl(this.park.ParkID),
+      
       ParkName: new FormControl(this.park.ParkName),
       ParkCost: new FormControl(this.park.ParkCost),
       ParkAddress: new FormControl(this.park.ParkAddress),
@@ -45,11 +45,21 @@ export class ParkEditComponent implements OnInit {
     })
   }
 
-  onSubmit() {
-    this._parkService.updatePark(this.editParkForm.value).subscribe( data => {
-      this._router.navigate(['/park']);
+  onSubmit(form) {
+    const updatePark: Park = {
+      ParkID: this.park.ParkID,
+      ParkName: form.value.ParkName,
+      ParkCost: form.value.ParkCost,
+      ParkAddress: form.value.ParkAddress,
+      ParkCity: form.value.ParkCity,
+      ParkState: form.value.ParkState,
+      ParkZip: form.value.ParkZip,
+      ParkPhone: form.value.ParkPhone,
+      ParkWebsite: form.value.ParkWebsite,
+      ParkDescription: form.value.ParkDescription
+    };
+    this._parkService.updatePark(updatePark).subscribe( d => {
+      // this._router.navigate(['/park']);
     });
   }
-
-
 }

@@ -5,51 +5,51 @@
     <div>
       <div >
         <mat-form-field>
-          <input matInput placeholder="Park Name" formControlname="ParkName" type="ParkName" >
+          <input matInput placeholder="Park Name" formControlname="ParkName" type="ParkName" [value]="park.ParkName" >
         </mat-form-field>
       </div>
       <div >
           <mat-form-field>
-            <input matInput placeholder="Park Cost" formControlname="ParkCost" type="ParkCost">
+            <input matInput placeholder="Park Cost" formControlname="ParkCost" type="ParkCost" [value]="park.ParkCost">
           </mat-form-field>
       </div>
       <div >
             <mat-form-field>
-              <input matInput placeholder="Park Address" formControlname="ParkAddress" type="ParkAddress">
+              <input matInput placeholder="Park Address" formControlname="ParkAddress" type="ParkAddress" [value]="park.ParkAddress">
             </mat-form-field>
       </div>
       <div >
           <mat-form-field>
-            <input matInput placeholder="Park City" formControlname="ParkCity" type="ParkCity">
+            <input matInput placeholder="Park City" formControlname="ParkCity" type="ParkCity" [value]="park.ParkCity">
           </mat-form-field>
       </div>
       <div >
           <mat-form-field>
-            <input matInput placeholder="Park State" formControlname="ParkState" type="ParkState">
+            <input matInput placeholder="Park State" formControlname="ParkState" type="ParkState" [value]="park.ParkState">
           </mat-form-field>
       </div>
       <div >
           <mat-form-field>
-            <input matInput placeholder="Park Zip" formControlname="ParkZip" type="ParkZip">
+            <input matInput placeholder="Park Zip" formControlname="ParkZip" type="ParkZip" [value]="park.ParkZip">
           </mat-form-field>
       </div>
-      <div hidden>
+      <div>
           <mat-form-field>
-            <input matInput placeholder="Park Phone" formControlname="ParkPhone" type="ParkPhone">
-          </mat-form-field>
-      </div>
-      <div >
-          <mat-form-field>
-            <input matInput placeholder="Park Website" formControlname="ParkWebsite" type="ParkWebsite">
+            <input matInput placeholder="Park Phone" formControlname="ParkPhone" type="ParkPhone" [value]="park.ParkPhone">
           </mat-form-field>
       </div>
       <div >
           <mat-form-field>
-            <input matInput placeholder="Park Description" formControlname="ParkDescription" type="ParkDescription">
+            <input matInput placeholder="Park Website" formControlname="ParkWebsite" type="ParkWebsite" [value]="park.ParkWebsite">
+          </mat-form-field>
+      </div>
+      <div >
+          <mat-form-field>
+            <input matInput placeholder="Park Description" formControlname="ParkDescription" type="ParkDescription" [value]="park.ParkDescription">
           </mat-form-field>
       </div>
     </div>
-    <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Park</button>
+    <button mat-raised-button class="nav-btn" color="primary" routerLink="/park">Update Park</button>
   </form>
 </div>
 
