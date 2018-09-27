@@ -3,12 +3,13 @@
 </head>
 
 <mat-toolbar color="primary" class="nav-bar">
-  
-  <div *ngIf="!isLoggedIn">
-    <button mat-stroked-button routerLink="/register">Register</button>
-    <button mat-stroked-button routerLink="/login">Login</button>
-    <div>
-      <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
+    <div *ngIf="!isLoggedIn">
+      <button mat-stroked-button routerLink="/register" class="buttons">Register</button>
+      <button mat-stroked-button routerLink="/login" class="buttons">Login</button>
+
+      <div>
+          <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
+      </div>
     </div>
   </div>
     
@@ -21,10 +22,8 @@
     <div>
      <a routerLink="/home" class="heading" id="parktechlogo"><span>Parks and Tech</span></a>
     </div>
-    </div>
+     <div>
       <button id="logout" mat-stroked-button (click)="onLoggout()">Logout</button>
     </div>
-        <button id="logout" mat-stroked-button routerLink="/login">Logout</button>
-  </div>
 </mat-toolbar>
 <span class="example-fill-remaining-space"></span>
