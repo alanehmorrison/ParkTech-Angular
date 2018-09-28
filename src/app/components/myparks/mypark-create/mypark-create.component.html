@@ -2,7 +2,7 @@
 
 <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="myParkForm">
   <div>
-    <div>
+    <div hidden>
       <mat-form-field>
         <mat-select placeholder="Park ID" formControlName="ParkID" required>
           <mat-option *ngFor="let parkId of parks" [value]="parkId.ParkID">{{parkId.ParkID}}</mat-option>
@@ -16,7 +16,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div>
+    <div hidden>
       <mat-form-field>
         <mat-select placeholder="Trail ID" formControlName="TrailID" required>
           <mat-option *ngFor="let trailId of trails" [value]="trailId.TrailID">{{trailId.TrailID}}</mat-option>
