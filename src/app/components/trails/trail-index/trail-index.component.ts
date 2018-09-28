@@ -11,9 +11,8 @@ import { MatTableDataSource } from '@angular/material';
 
 export class TrailIndexComponent implements OnInit {
 
-  columnNames = ['TrailID', 'TrailName', 'TrailDistance', 'TrailDiff', 'IsOpen', 'ParkID', 'buttons']
+  columnNames = ['TrailID', 'TrailName', 'TrailDistance', 'TrailDiff', 'IsOpen', 'ParkName', 'buttons']
   dataSource: MatTableDataSource<Trail>;
-  // difficulty: Difficulty;
   enumDisplay: string;
   trail: Trail;
 
@@ -25,7 +24,6 @@ export class TrailIndexComponent implements OnInit {
       for (var trail in trails)
       {
         console.log(Difficulty[trails[trail].TrailDifficulty]);
-        // this.enumDisplay = Difficulty[trails[trail].TrailDifficulty];
         this.enumDisplay = Difficulty[this.dataSource.data[trail].TrailDifficulty];
         this.dataSource.data[trail].TrailDiff =this.enumDisplay;
       }

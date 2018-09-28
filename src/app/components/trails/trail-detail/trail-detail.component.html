@@ -1,39 +1,51 @@
+<div class="main-div">
+
 <h1>Trail Details</h1>
 
-<div *ngIf="trail" class="main-div">
-  <div>
-    <label for="">Trail ID</label>
+<div *ngIf="trail">
+  <div hidden>
+    <label class="trail-detail-lable" for="">Trail ID:</label>
+    &nbsp;
     <span>{{trail.TrailID}}</span>
   </div>
   <div>
-    <label for="">Trail Name</label>
+    <label class="trail-detail-lable" for="">Trail Name:</label>
+    &nbsp;
     <span>{{trail.TrailName}}</span>
   </div>
   <div>
-    <label for="">Trail Distance</label>
+    <label class="trail-detail-lable" for="">Trail Distance:</label>
+    &nbsp;
     <span>{{trail.TrailDistance}}</span>
   </div>
   <div>
-    <label for="">Trail Difficulty</label>
+    <label class="trail-detail-lable" for="">Trail Difficulty:</label>
+    &nbsp;
     <span>{{trail.TrailDifficulty}}</span>
   </div>
   <div>
-    <label for="">Is Open</label>
+    <label class="trail-detail-lable" for="">Is Open:</label>
+    &nbsp;
     <span>{{trail.IsOpen}}</span>
   </div>
-  <div>
-    <label for="">Park ID</label>
+  <div hidden>
+    <label class="trail-detail-lable" for="">Park ID:</label>
+    &nbsp;
     <span>{{trail.ParkID}}</span>
   </div>
   <div>
-    <label for="">Park Name</label>
+    <label class="trail-detail-lable" for="">Park Name:</label>
+    &nbsp;
     <span>{{trail.ParkName}}</span>
   </div>
-  <div>
-    <label for="">Park</label>
+  <div hidden>
+    <label class="trail-detail-lable" for="">Park:</label>
+    &nbsp;
     <span>{{trail.Park}}</span>
   </div>
 </div>
 
 <button mat-button class="nav-btn" color="accent">Edit</button>
 <button mat-button class="nav-btn" routerLink="/trail">Back to List</button>
+
+</div>

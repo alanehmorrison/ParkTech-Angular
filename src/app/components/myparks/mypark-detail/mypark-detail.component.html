@@ -1,31 +1,43 @@
+<div class="main-div">
+
 <h1>My Parks Details</h1>
 
 <div *ngIf="myPark">
-  <div>
-    <label for="">Park ID</label>
+  <div hidden>
+    <label class="mypark-detail-lable" for="">Park ID:</label>
+    &nbsp;
     <span> {{myPark.ParkID}}</span>
   </div>
   <div>
-    <label for="">Park Name</label>
+    <label class="mypark-detail-lable" for="">Park Name:</label>
+    &nbsp;
     <span> {{myPark.ParkName}}</span>
   </div>
-  <div>
-    <label for="">Trail ID</label>
+  <div hidden>
+    <label class="mypark-detail-lable" for="">Trail ID:</label>
+    &nbsp;
     <span> {{myPark.TrailID}}</span>
   </div>
   <div>
-    <label for="">Trail Name</label>
+    <label class="mypark-detail-lable" for="">Trail Name:</label>
+    &nbsp;
     <span> {{myPark.TrailName}}</span>
   </div>
   <div>
-    <label for="">My Trail Status</label>
+    <label class="mypark-detail-lable" for="">My Trail Status:</label>
+    &nbsp;
     <span> {{myPark.MyTrailStatus}}</span>
   </div>
   <div>
-    <label for="">Trail Comments</label>
+    <label class="mypark-detail-lable" for="">Trail Comments:</label>
+    &nbsp;
     <span> {{myPark.TrailComment}}</span>
   </div>
 </div>
 
 <button mat-button class="nav-btn">Edit</button>
 <button mat-button class="nav-btn" routerLink="/mypark">Back to List</button>
+
+&nbsp;
+
+</div>
