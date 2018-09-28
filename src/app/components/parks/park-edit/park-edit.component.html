@@ -3,55 +3,54 @@
 <div *ngIf="park" class="main-div">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editParkForm">
     <div>
-      <div >
+      <div>
         <mat-form-field>
-          <input matInput placeholder="Park Name" formControlname="ParkName" type="ParkName" [value]="park.ParkName" >
+          <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" [value]="park.ParkName">
         </mat-form-field>
       </div>
-      <div >
-          <mat-form-field>
-            <input matInput placeholder="Park Cost" formControlname="ParkCost" type="ParkCost" [value]="park.ParkCost">
-          </mat-form-field>
-      </div>
-      <div >
-            <mat-form-field>
-              <input matInput placeholder="Park Address" formControlname="ParkAddress" type="ParkAddress" [value]="park.ParkAddress">
-            </mat-form-field>
-      </div>
-      <div >
-          <mat-form-field>
-            <input matInput placeholder="Park City" formControlname="ParkCity" type="ParkCity" [value]="park.ParkCity">
-          </mat-form-field>
-      </div>
-      <div >
-          <mat-form-field>
-            <input matInput placeholder="Park State" formControlname="ParkState" type="ParkState" [value]="park.ParkState">
-            <mat-select placeholder="Park State" formControlName="ParkState" required>
-              <mat-option *ngFor="let parkstates of states"[value]="parkstates">{{parkstates}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-      </div>
-      <div >
-          <mat-form-field>
-            <input matInput placeholder="Park Zip" formControlname="ParkZip" type="ParkZip" [value]="park.ParkZip">
-          </mat-form-field>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Park Cost" formControlName="ParkCost" type="ParkCost" [value]="park.ParkCost">
+        </mat-form-field>
       </div>
       <div>
-          <mat-form-field>
-            <input matInput placeholder="Park Phone" formControlname="ParkPhone" type="ParkPhone" [value]="park.ParkPhone">
-          </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Park Address" formControlName="ParkAddress" type="ParkAddress" [value]="park.ParkAddress">
+        </mat-form-field>
       </div>
-      <div >
-          <mat-form-field>
-            <input matInput placeholder="Park Website" formControlname="ParkWebsite" type="ParkWebsite" [value]="park.ParkWebsite">
-          </mat-form-field>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Park City" formControlName="ParkCity" type="ParkCity" [value]="park.ParkCity">
+        </mat-form-field>
       </div>
-      <div >
-          <mat-form-field>
-            <input matInput placeholder="Park Description" formControlname="ParkDescription" type="ParkDescription" [value]="park.ParkDescription">
-          </mat-form-field>
+      <div>
+        <mat-form-field>
+          <mat-select placeholder="Park State" formControlName="ParkState" required>
+            <mat-option *ngFor="let parkstates of states" [value]="parkstates">{{parkstates}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Park Zip" formControlName="ParkZip" type="ParkZip" [value]="park.ParkZip">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Park Phone" formControlName="ParkPhone" type="ParkPhone" [value]="park.ParkPhone">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Park Website" formControlName="ParkWebsite" type="ParkWebsite" [value]="park.ParkWebsite">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Park Description" formControlName="ParkDescription" type="ParkDescription" [value]="park.ParkDescription">
+        </mat-form-field>
       </div>
     </div>
-    <button mat-raised-button class="nav-btn" color="primary" routerLink="/park">Update Park</button>
+    <button mat-raised-button class="nav-btn" color="primary">Update Park</button>
   </form>
 </div>
