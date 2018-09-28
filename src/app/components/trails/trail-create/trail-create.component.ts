@@ -13,11 +13,12 @@ import { ParkService } from '../../../Services/park.service';
 })
 
 export class TrailCreateComponent implements OnInit {
-
+ 
   trailForm: FormGroup;
   parks: Park[];
   isOpen: string [] = [ 'true','false'];
   trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
+
   constructor(private _trailService: TrailService, private _form: FormBuilder, private _router: Router, private _parkService: ParkService) {
     this.createForm();
   }

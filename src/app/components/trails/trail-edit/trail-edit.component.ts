@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from 'node_modules/@angular/forms';
-import { Trail } from '../../../Shared/Models/Trail';
+import { Trail, Difficulty } from '../../../Shared/Models/Trail';
 import { TrailService } from '../../../Services/trail.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Park } from '../../../Shared/Models/Park';
+
 
 @Component({
   selector: 'app-trail-edit',
@@ -16,8 +17,10 @@ export class TrailEditComponent implements OnInit {
   trail: Trail;
   parks: Park[];
   isOpen: string [] = [ 'true','false'];
-  trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
   editTrailForm: FormGroup;
+  trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
+  trailDifficultyEnum: Difficulty;
+  initialVal: string | null;
 
   constructor(private _form: FormBuilder,
               private _trailservice: TrailService,
@@ -27,6 +30,7 @@ export class TrailEditComponent implements OnInit {
                 this._ar.paramMap.subscribe(p =>{
                   this._trailservice.getTrailByID(p.get('id')).subscribe((singleTrail: Trail) => {
                     this.trail = singleTrail;
+                    this.initialVal = Difficulty[singleTrail.TrailDifficulty];
                     this.createForm();
                   });
                 });
