@@ -25,7 +25,6 @@ export class ParkCreateComponent implements OnInit {
 
   createForm() {
     this.parkForm = this._form.group({
-      ParkID: new FormControl,
       ParkName: new FormControl,
       ParkCost: new FormControl,
       ParkCity: new FormControl,

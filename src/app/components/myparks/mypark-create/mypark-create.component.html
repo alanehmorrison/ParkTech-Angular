@@ -1,7 +1,7 @@
 <h1>Parks You've Visited</h1>
 
 <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="myParkForm">
-  <div>
+  <div class="main-div">
     <div hidden>
       <mat-form-field>
         <mat-select placeholder="Park ID" formControlName="ParkID" required>
@@ -46,4 +46,4 @@
   <button mat-raised-button class="nav-btn" color="primary" type="submit">Create New Park</button>
 </form>
 ​
-<a mat-button routerLink="/mypark">Back to List</a>
+<a mat-button class="nav-btn" routerLink="/mypark">Back to List</a>

@@ -1,7 +1,7 @@
 <h1 class="main-heading">Create a Park</h1>
 <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="parkForm">
   <div class="main-div">
-    
+
     <div hidden>
       <mat-form-field>
         <input matInput placeholder="ParkID" formControlName="ParkID" type="ParkID" required/>
@@ -58,7 +58,7 @@
     <button mat-raised-button type="button" routerLink = "/park" (click)="onSubmit()">Create Park</button>
     <br>
     <br>
-    <a mat-button routerLink="/park">Back to Parks</a>
+    <a mat-button class="nav-btn" routerLink="/park">Back to Parks</a>
   </div>
   
 </form>
