@@ -1,7 +1,7 @@
 import { Park } from "./Park";
 import { Trail } from "./Trail";
 
-enum MyTrailStatus{
+export enum MyTrailStatus{
     Completed = 1,
     Wishlist, 
     Favorite
@@ -12,6 +12,7 @@ export interface MyPark{
     ParkID: number;
     TrailID: number;
     MyTrailStatus: MyTrailStatus;
+    StatusString?: string;
     ParkName: string;
     TrailName: string;
     TrailComment: string;

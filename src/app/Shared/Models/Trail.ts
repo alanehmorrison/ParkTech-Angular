@@ -10,7 +10,8 @@ export interface Trail{
     TrailID?: number;
     TrailName: string;
     TrailDistance: number;
-    TrailDifficulty: Difficulty;
+    TrailDifficulty?: Difficulty;
+    TrailDiff?: string;
     IsOpen: boolean;
     ParkID: Park;
     ParkName?: Park;
