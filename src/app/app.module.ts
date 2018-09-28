@@ -11,7 +11,8 @@ import { MatToolbarModule,
          MatFormFieldModule, 
          MatInputModule,
          MatTableModule, 
-        MatSelectModule } from '@angular/material';
+         MatSelectModule,
+         MatPaginatorModule } from '@angular/material';
 import { RegistrationComponent } from './Shared/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { HomeComponent } from './Shared/home/home.component';
@@ -114,7 +115,8 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule
   ],
   providers: [
     AuthService,

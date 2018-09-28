@@ -1,8 +1,8 @@
 <h1>Trails</h1>
 
-<a mat-raised-button class="nav-btn" routerLink="/trail/create">Add New Trail</a>
+<a mat-raised-button routerLink="/trail/create">Add New Trail</a>
 
-<div class="trail-index">
+<div class="main-div main-div2">
   <table mat-table [dataSource]="dataSource">
     <tr mat-header-row *matHeaderRowDef="columnNames"></tr >
     <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
@@ -38,7 +38,7 @@
     </ng-container>
 
     <ng-container matColumnDef="buttons">
-      <th mat-header-cell *matHeaderCellDef> </th>
+      <th mat-header-cell *matHeaderCellDef>Edit / Delete </th>
       <td mat-cell *matCellDef="let trail">
         <i mat-icon class="material-icons" routerLink="/trail/edit/{{trail.TrailID}}">edit</i>
         <i class="material-icons" routerLink="/trail/delete/{{trail.TrailID}}">delete</i>
