@@ -1,34 +1,36 @@
+<div class="main-div">
+
 <h1>My Parks Delete</h1>
-<h4>Are you sure you want to delete this entry?</h4>
+<h3 class="mypark-delete-warning">Are you sure you want to delete this entry?</h3>
 
 <div *ngIf="myPark">
-  <div class="main-div">
-    <label for="">ParkID</label>
+  <div>
+    <label class="mypark-delete-lable" for="">ParkID</label>
     <span>{{myPark.ParkID}}</span>
   </div>
   <div>
-    <label for="">ParkName</label>
+    <label class="mypark-delete-lable" for="">ParkName</label>
     <span>{{myPark.ParkName}}</span>
   </div>
   <div>
-    <label for="">Trail ID</label>
+    <label class="mypark-delete-lable" for="">Trail ID</label>
     <span>{{myPark.TrailID}}</span>
   </div>
   <div>
-    <label for="">Trail Name</label>
+    <label class="mypark-delete-lable" for="">Trail Name</label>
     <span>{{myPark.TrailName}}</span>
   </div>
   <div>
-    <label for="">My Trail Status</label>
+    <label class="mypark-delete-lable" for="">My Trail Status</label>
     <span>{{myPark.MyTrailStatus}}</span>
   </div>
   <div>
-    <label for="">Trail Comment</label>
+    <label class="mypark-delete-lable" for="">Trail Comment</label>
     <span>{{myPark.TrailComment}}</span>
   </div>
 </div>
 
-<button mat-button color="warm" (click)="onDelete()">Delete</button>
+<button mat-button color="warn" type="submit" (click)="onDelete()">Delete</button> |
 <button mat-button color="primary" routerLink="/mypark">Back to List</button>
 
 <ng-container matColumnDef="buttons">
@@ -38,3 +40,5 @@
     <i class="material-icons" routerLink="/mypark/delete/{{mypark.MyParkID}}">delete</i>
   </mat-cell>
 </ng-container>
+
+</div>

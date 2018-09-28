@@ -1,48 +1,57 @@
-<h1>Delete Park</h1>
-<h4>Are you sure you want to delete this park?</h4>
+<div class="main-div">
 
-<div *ngIf="park" class="main-div">
+<h1>Delete Park</h1>
+<h3 class="park-delete-warning">Are you sure you want to delete this park?</h3>
+
+<div *ngIf="park">
   <div>
-    <label for="">ParkID</label>
-    <span>{{park.ParkID}}</span>
-  </div>
-  <div>
-      <label for="">ParkName</label>
+      <label class="park-delete-lable" for="">Park Name:</label>
+      &nbsp;
       <span>{{park.ParkName}}</span>
   </div>
   <div>
-      <label for="">ParkCost</label>
+      <label class="park-delete-lable" for="">Park Cost: </label>
+      &nbsp;
       <span>{{park.ParkCost}}</span>
   </div>
   <div>
-      <label for="">ParkAddress</label>
+      <label class="park-delete-lable" for="">Park Address: </label>
+      &nbsp;
       <span>{{park.ParkAddress}}</span>
   </div>
   <div>
-      <label for="">ParkCity</label>
+      <label class="park-delete-lable" for="">Park City: </label>
+      &nbsp;
       <span>{{park.ParkCity}}</span>
   </div>
   <div>
-      <label for="">ParkState</label>
+      <label class="park-delete-lable" for="">Park State: </label>
+      &nbsp;
       <span>{{park.ParkState}}</span>
   </div>
   <div>
-      <label for="">ParkZip</label>
+      <label class="park-delete-lable" for="">Park Zip: </label>
+      &nbsp;
       <span>{{park.ParkZip}}</span>
   </div>
   <div>
-      <label for="">ParkPhone</label>
+      <label class="park-delete-lable" for="">Park Phone: </label>
+      &nbsp;
       <span>{{park.ParkPhone}}</span>
   </div>
   <div>
-      <label for="">ParkWebsite</label>
+      <label class="park-delete-lable" for="">Park Website: </label>
+      &nbsp;
       <span>{{park.ParkWebsite}}</span>
   </div>
   <div>
-      <label for="">ParkDescription</label>
+      <label class="park-delete-lable" for="">Park Description: </label>
+      &nbsp;
       <span>{{park.ParkDescription}}</span>
   </div>
 </div>
 
 <button mat-button color="warn" type="submit" (click)="onDelete()">Delete</button> |
 <button mat-button color="primary" routerLink="/park">Back to List</button>
+
+</div>
