@@ -22,6 +22,17 @@ body{
     padding-top: 10px;
 }
 .nav-btn{
-    background-color: #763c24;
+    background-color: rgb(109, 109, 201);
     color: white;
+}
+
+.headings{
+    font-size: large;
+    font-weight: bold;
+}
+h1{
+    color: white;
+    text-shadow: 3px blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }
