@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyParkService } from '../../../Services/mypark.service';
-import { MyPark } from '../../../Shared/Models/MyPark'
+import { MyPark, MyTrailStatus } from '../../../Shared/Models/MyPark'
 import { MatTableDataSource } from '../../../../../node_modules/@angular/material';
 
 @Component({
@@ -11,16 +11,21 @@ import { MatTableDataSource } from '../../../../../node_modules/@angular/materia
 
 export class MyParkIndexComponent implements OnInit {
 
-  columnNames = ['ParkName', 'TrailID', 'TrailName', 'MyTrailStatus', 'TrailComment']
+  columnNames = ['ParkName', 'TrailID', 'TrailName', 'StatusString', 'TrailComment']
   dataSource: MatTableDataSource<MyPark>;
+  enumDisplay: string;
+  myPark: MyPark;
 
   constructor(private _myParkService: MyParkService) { }
 
   ngOnInit() {
-    this._myParkService.getAllMyParks().subscribe((myPark: MyPark[]) => {
-      console.log(myPark)
-      this.dataSource = new MatTableDataSource<MyPark>(myPark);
-      console.log(myPark)
+    this._myParkService.getAllMyParks().subscribe((myParks: MyPark[]) => {
+      this.dataSource = new MatTableDataSource<MyPark>(myParks);
+      for (var myPark in myParks)
+      {
+        this.enumDisplay = MyTrailStatus[this.dataSource.data[myPark].MyTrailStatus];
+        this.dataSource.data[myPark].StatusString = this.enumDisplay;
+      }
     });
   }
 }

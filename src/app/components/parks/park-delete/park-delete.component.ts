@@ -17,14 +17,18 @@ export class ParkDeleteComponent implements OnInit {
       this._parkService.getParkByID(p.get('id')).subscribe((singlePark: Park) =>{
         this.park = singlePark;
       })
-    })
+    });
    }
 
-  ngOnInit() {
-  }
+
+
   onDelete(){
     this._parkService.deletePark(this.park.ParkID).subscribe(() =>{
       this._router.navigate(['/park']);
     });
   }
+
+  ngOnInit() {
+  }
 }
+  

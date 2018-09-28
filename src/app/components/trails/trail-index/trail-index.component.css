@@ -4,3 +4,24 @@
     padding-top: 10px;
     opacity: 0.8;
 }
+
+.main-div2{
+    margin-top: 10px;
+    display: flex;
+}
+.main-div2 table {
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+th, td {
+    text-align: left;
+    border-bottom: 1px solid blue;
+}
+
+tr:nth-child(even){
+    background-color: rgb(161, 161, 240);
+}
+.material-icons{
+    cursor: pointer;
+} 
