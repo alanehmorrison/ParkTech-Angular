@@ -2,7 +2,6 @@ import { Component, OnInit, SimpleChange } from '@angular/core';
 import { Trail, Difficulty, Condition } from '../../../Shared/Models/Trail';
 import { TrailService } from '../../../Services/trail.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-trail-delete',
@@ -15,7 +14,6 @@ export class TrailDeleteComponent implements OnInit {
   trail: Trail;
   difficultyDisplay: string;
   conditionDisplay: string;
-  dataSource: MatTableDataSource<Trail>;
 
   constructor(private _trailService: TrailService, private _ar: ActivatedRoute, private _router: Router) {
     this._ar.paramMap.subscribe(p => {

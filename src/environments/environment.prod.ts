@@ -5,7 +5,7 @@ switch (window.location.hostname) {
     ApiUrl += 'https://parksandtech.azurewebsites.net/';
     break;
   default:
-  ApiUrl += 'http://localhost:50913/';
+  ApiUrl += 'https://parksandtech.azurewebsites.net/';
 
 }
 
