@@ -63,7 +63,7 @@ export class ParkEditComponent implements OnInit {
       ParkDescription: form.value.ParkDescription
     };
     this._parkService.updatePark(updatePark).subscribe( d => {
-      // this._router.navigate(['/park']);
+      this._router.navigate(['/park']);
     });
   }
 }

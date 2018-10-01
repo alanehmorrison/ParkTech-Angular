@@ -6,13 +6,21 @@ export enum Difficulty{
     Challenging = 3,
 }
 
+export enum Condition{
+    Open = 1,
+    Closed = 2,
+    Construction = 3,
+    Weather = 4,
+}
+
 export interface Trail{
     TrailID?: number;
     TrailName: string;
     TrailDistance: number;
     TrailDifficulty?: Difficulty;
     TrailDiff?: string;
-    IsOpen: boolean;
+    TrailCondition: Condition;
+    TempCondition?: string;
     ParkID: Park;
     ParkName?: Park;
 }

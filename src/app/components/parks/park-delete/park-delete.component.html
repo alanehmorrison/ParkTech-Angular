@@ -1,57 +1,58 @@
-<div class="main-div">
-
-<h1>Delete Park</h1>
-<h3 class="park-delete-warning">Are you sure you want to delete this park?</h3>
-
-<div *ngIf="park">
-  <div>
-      <label class="park-delete-lable" for="">Park Name:</label>
-      &nbsp;
-      <span>{{park.ParkName}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park Cost: </label>
-      &nbsp;
-      <span>{{park.ParkCost}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park Address: </label>
-      &nbsp;
-      <span>{{park.ParkAddress}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park City: </label>
-      &nbsp;
-      <span>{{park.ParkCity}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park State: </label>
-      &nbsp;
-      <span>{{park.ParkState}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park Zip: </label>
-      &nbsp;
-      <span>{{park.ParkZip}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park Phone: </label>
-      &nbsp;
-      <span>{{park.ParkPhone}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park Website: </label>
-      &nbsp;
-      <span>{{park.ParkWebsite}}</span>
-  </div>
-  <div>
-      <label class="park-delete-lable" for="">Park Description: </label>
-      &nbsp;
-      <span>{{park.ParkDescription}}</span>
-  </div>
-</div>
-
-<button mat-button color="warn" type="submit" (click)="onDelete()">Delete</button> |
-<button mat-button color="primary" routerLink="/park">Back to List</button>
-
+<div class="container">
+        <div class="main-div">
+                <h1>Delete Park</h1>
+                <h3 class="park-delete-warning">Are you sure you want to delete this park?</h3>
+                
+                <div *ngIf="park">
+                  <div>
+                      <label class="park-delete-lable" for="">Park Name:</label>
+                      &nbsp;
+                      <span>{{park.ParkName}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park Cost: </label>
+                      &nbsp;
+                      <span>$ {{park.ParkCost}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park Address: </label>
+                      &nbsp;
+                      <span>{{park.ParkAddress}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park City: </label>
+                      &nbsp;
+                      <span>{{park.ParkCity}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park State: </label>
+                      &nbsp;
+                      <span>{{park.ParkState}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park Zip: </label>
+                      &nbsp;
+                      <span>{{park.ParkZip}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park Phone: </label>
+                      &nbsp;
+                      <span>{{park.ParkPhone}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park Website: </label>
+                      &nbsp;
+                      <span>{{park.ParkWebsite}}</span>
+                  </div>
+                  <div>
+                      <label class="park-delete-lable" for="">Park Description: </label>
+                      &nbsp;
+                      <span>{{park.ParkDescription}}</span>
+                  </div>
+                </div>
+                
+                <button mat-button color="warn" type="submit" (click)="onDelete()">Delete</button> |
+                <button mat-button class="nav-btn" routerLink="/park">Back to List</button>
+                
+                </div>   
 </div>

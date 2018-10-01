@@ -1,41 +1,46 @@
-<h1>Edit My Park</h1>
-
-<div *ngIf="myPark" class="main-div">
+<div class="container">
+  <div *ngIf="myPark" class="main-div">
+    <h1>Edit My Park</h1>
     <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editMyParkForm">
-    <div>
-      <div hidden>
-        <mat-form-field>
-          <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID" required [value]="mypark.ParkID"/>
-        </mat-form-field>
-      </div>
       <div>
-        <mat-form-field>
-          <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" required/>
-        </mat-form-field>
+        <div >
+          <mat-form-field>
+            <mat-select matInput placeholder="Park ID" formControlName="ParkID" required>
+              <mat-option *ngFor="let parkID of parks" [value]="myPark.ParkID">{{myPark.ParkID}}</mat-option>
+            </mat-select>
+            <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName" [value]="myPark.ParkName">
+          </mat-form-field>
+        </div>
+        <div >
+          <mat-form-field>
+            <input matInput placeholder="Trail ID" formControlName="TrailID" type="TrailID" [value]="myPark.TrailID">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName" [value]="myPark.TrailName">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+
+            <mat-select placeholder="My Trail Status" formControlName="MyTrailStatus" required>
+              <mat-option *ngFor="let trailStatus of trailStatus" [value]="trailStatus">{{trailStatus}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Trail Comment" formControlName="TrailComment" type="TrailComment" [value]="myPark.TrailComment">
+          </mat-form-field>
+        </div>
       </div>
-      <div hidden>
-        <mat-form-field>
-          <input matInput placeholder="Trail ID" formControlName="TrailID" type="TrailID" required [value]="myPark.TrailID"/>
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName" required/>
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="My Trail Status" formControlName="MyTrailStatus" type="MyTrailStatus" required/>
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="Trail Comment" formControlName="TrailComment" type="TrailComment" required/>
-        </mat-form-field>
-      </div>
-    </div>
-    <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
-  </form>
-</div>
+      <button mat-raised-button class="nav-btn" color="primary">Update</button>
+    </form>
+  </div>
   ​
-<a mat-button routerLink="/mypark">Back to List</a>

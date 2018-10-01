@@ -6,56 +6,7 @@
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
 }
-.heading{
-    text-decoration: none;
-    color: white;
-    padding-bottom: 20px;
-    margin-left: 40%;
-}
-h1{
-    position: relative;
-    color: white;
-}
-.btn-group button {
-  
-    float: left; /* Float the buttons side by side */
-}
 
-.btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-    background-color: #ddeedd;
-}
-
-#parktechlogo{
-    margin: 0;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) 
-}
-
-#logout{
-    margin: 0;
-    position: absolute;
-    top: 5%;
-    left: 95%;
-    margin-right: -50%;
-
-    transform: translate(-50%, -50%) ;
-    margin-bottom: 10px;
-}
 .buttons{
     margin-right: 10px;
 }
@@ -63,3 +14,47 @@ h1{
     margin-right: 10px;
 }
 
+.main-container{
+    display: flex;
+}
+.logging-btns{
+    display: flex;
+    flex: 1;
+    order: 1;
+    justify-content: flex-start;
+}
+.heading-logo{
+    display: flex;
+    flex: 1;
+    order: 2;
+    justify-content: flex-end;
+    
+}
+.heading-logo a{
+    text-decoration: none;
+    color: white;
+}
+.three-btns{
+    display: flex;
+    flex: 1;
+    order: 1;
+    justify-content: flex-start;
+}
+.logo{
+    display: flex;
+    flex: 1;
+    order: 2;
+    justify-content: center;
+    align-items: center;
+}
+.logout-btn{
+    display: flex;
+    flex: 1;
+    order: 3;
+    justify-content: flex-end
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+    /* margin-left: 150px; */
+}
