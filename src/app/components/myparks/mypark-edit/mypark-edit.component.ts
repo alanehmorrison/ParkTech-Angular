@@ -15,8 +15,8 @@ import { ParkService } from '../../../Services/park.service';
 export class MyParkEditComponent implements OnInit {
 
   myPark: MyPark;
+  park: Park;
   trailStatus: string [] = ['Completed', 'Wishlist', 'Favorite'];
-  
   editMyParkForm: FormGroup;
 
   constructor(private _form: FormBuilder, 
