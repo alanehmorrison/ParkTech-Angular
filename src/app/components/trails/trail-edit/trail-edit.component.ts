@@ -16,10 +16,10 @@ export class TrailEditComponent implements OnInit {
 
   trail: Trail;
   parks: Park[];
-  isOpen: string [] = [ 'true','false'];
   editTrailForm: FormGroup;
   trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
   trailDifficultyEnum: Difficulty;
+  trailCondition: string [] = [ 'Open', 'Closed', 'Construction', 'Weather'];
   initialVal: string | null;
 
   constructor(private _form: FormBuilder,
@@ -45,7 +45,7 @@ export class TrailEditComponent implements OnInit {
       TrailName: new FormControl(this.trail.TrailName),
       TrailDistance: new FormControl(this.trail.TrailDistance),
       TrailDifficulty: new FormControl(this.trail.TrailDifficulty),
-      IsOpen: new FormControl(this.trail.IsOpen),
+      TrailCondition: new FormControl(this.trail.TrailCondition),
       ParkID: new FormControl(this.trail.ParkID),
       ParkName: new FormControl(this.trail.ParkName)
     });
@@ -57,7 +57,7 @@ export class TrailEditComponent implements OnInit {
       TrailName: form.value.TrailName,
       TrailDistance: form.value.TrailDistance,
       TrailDifficulty: form.value.TrailDifficulty,
-      IsOpen: form.value.IsOpen,
+      TrailCondition: form.value.TrailCondition,
       ParkID: form.value.ParkID,
       ParkName: form.value.ParkName
     };
