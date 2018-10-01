@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyPark } from 'src/app/Shared/Models/MyPark';
+import { MyPark, MyTrailStatus } from 'src/app/Shared/Models/MyPark';
 import { MyParkService } from 'src/app/Services/mypark.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MyParkDeleteComponent implements OnInit {
 
   myPark : MyPark;
+  tempStatus: string;
   
   constructor(private _myParkService: MyParkService, private _ar: ActivatedRoute, private _router: Router) {
     this._ar.paramMap.subscribe(p => {
@@ -27,5 +28,13 @@ export class MyParkDeleteComponent implements OnInit {
    }
 
   ngOnInit() {
+    this._ar.paramMap.subscribe(p => {
+      this._myParkService.getMyParkByID(p.get('id')).subscribe((singleMyPark: MyPark) => {
+        this.myPark = singleMyPark;
+
+        this.tempStatus = MyTrailStatus[singleMyPark.MyTrailStatus];
+        this.myPark.StatusString = this.tempStatus;
+      })
+    })
   }
 }
