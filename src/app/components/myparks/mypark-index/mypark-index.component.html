@@ -30,6 +30,14 @@
       <th mat-header-cell *matHeaderCellDef class="headings">Trail Comment</th>
       <td mat-cell *matCellDef="let myPark">{{myPark.TrailComment}}</td>
     </ng-container>
+
+    <ng-container matColumnDef="buttons">
+        <th mat-header-cell *matHeaderCellDef class="headings"> Edit / Delete</th>
+        <td mat-cell *matCellDef="let mypark">
+          <i mat-icon class="material-icons" routerLink="/mypark/edit/{{mypark.MyParkID}}">edit</i>
+          <i class="material-icons" routerLink="/mypark/delete/{{mypark.MyParkID}}">delete</i> 
+        </td>
+    </ng-container>
     
   </table>
 </div>
