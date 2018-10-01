@@ -11,7 +11,7 @@ import { MatTableDataSource } from '../../../../../node_modules/@angular/materia
 
 export class MyParkIndexComponent implements OnInit {
 
-  columnNames = ['ParkName', 'TrailID', 'TrailName', 'StatusString', 'TrailComment']
+  columnNames = ['ParkName', 'TrailID', 'TrailName', 'StatusString', 'TrailComment', 'buttons']
   dataSource: MatTableDataSource<MyPark>;
   enumDisplay: string;
   myPark: MyPark;
