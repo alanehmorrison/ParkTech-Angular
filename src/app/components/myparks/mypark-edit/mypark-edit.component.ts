@@ -3,6 +3,9 @@ import { MyPark } from 'src/app/Shared/Models/MyPark';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { MyParkService } from '../../../Services/mypark.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Park } from 'src/app/Shared/Models/Park';
+import { ParkService } from '../../../Services/park.service';
+
 
 @Component({
   selector: 'app-mypark-edit',
@@ -12,13 +15,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MyParkEditComponent implements OnInit {
 
   myPark: MyPark;
-
+  park: Park;
+  trailStatus: string [] = ['Completed', 'Wishlist', 'Favorite'];
   editMyParkForm: FormGroup;
 
   constructor(private _form: FormBuilder, 
               private _myParkService: MyParkService,
               private _ar: ActivatedRoute,
-              private _router: Router ) {
+              private _router: Router,
+              private _parkService: ParkService ) {
                 
                 this._ar.paramMap.subscribe(mp => {
                   this._myParkService.getMyParkByID(mp.get('id')).subscribe((singleMyPark: MyPark) => {
