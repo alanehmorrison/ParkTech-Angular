@@ -70,7 +70,7 @@ const appRoutes: Routes = [
       { path: 'create', component: MyParkCreateComponent},
       { path: 'detail/:id', component: MyParkDetailComponent},
       { path: 'edit/:id', component: MyParkEditComponent},
-      { path: 'delete//:id', component: MyParkDeleteComponent}
+      { path: 'delete/:id', component: MyParkDeleteComponent}
     ]
   },
   { path: '**', component: HomeComponent}

@@ -1,6 +1,7 @@
+<h1>Delete Trail</h1>
+
 <div class="main-div">
 
-<h1>Delete Trail</h1>
 <h3 class="trail-delete-warning">Are you sure you want to delete this trail?</h3>
 
 <div *ngIf="trail">
@@ -10,9 +11,9 @@
     <span>{{trail.TrailName}}</span>
   </div>
   <div>
-    <label class="trail-delete-lable" for="">Trail Distance (miles):</label>
+    <label class="trail-delete-lable" for="">Trail Distance:</label>
     &nbsp;
-    <span>{{trail.TrailDistance}}</span>
+    <span>{{trail.TrailDistance}} miles</span>
   </div>
   <div>
     <label class="trail-delete-lable" for="">Difficulty:</label>
@@ -41,5 +42,5 @@
     <i class="material-icons" routerLink="/trails/delete/{{trail.TrailID}}">delete</i>
   </mat-cell>
 </ng-container>
-
+&nbsp;
 </div>
