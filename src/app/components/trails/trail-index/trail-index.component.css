@@ -25,3 +25,9 @@ tr:nth-child(even){
 .material-icons{
     cursor: pointer;
 } 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
