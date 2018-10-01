@@ -1,5 +1,5 @@
 <h1>Edit My Park</h1>
-
+<div class="container">
 <div *ngIf="myPark" class="main-div">
     <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editMyParkForm">
     <div>
@@ -36,12 +36,5 @@
         </mat-form-field>
       </div>
     </div>
-    <div>
-      <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
-      &nbsp;
-      <a mat-button class="nav-btn"  routerLink="/mypark">Back to List</a>
-    </div>
-    &nbsp;
-  </form>
 </div>
   ​
