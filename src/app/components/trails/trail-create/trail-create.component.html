@@ -22,12 +22,12 @@
     </div>
     <div>
       <mat-form-field>
-        <mat-select placeholder="Is It Open" formControlName="IsOpen" required>
-          <mat-option *ngFor="let isOpen of isOpen" [value]="isOpen">{{isOpen}}</mat-option>
+        <mat-select placeholder="Trail Condition" formControlName="TrailCondition" required>
+          <mat-option *ngFor="let trailCondition of trailCondition" [value]="trailCondition">{{trailCondition}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-    <div>
+    <div >
       <mat-form-field>
         <mat-select placeholder="Park ID" formControlName="ParkID"  required>
           <mat-option *ngFor="let parkID of parks" [value]="parkID.ParkID">{{parkID.ParkID}}</mat-option>
@@ -45,7 +45,7 @@
     <button mat-button type="button" routerLink= "/trail" (click)="onSubmit()"> Create Trail</button>
     <br>
     <br>
-    <a mat-button routerLink="/trail">Back to Trails</a>
+    <a mat-button class="nav-btn" routerLink="/trail">Back to Trails</a>
   </div>
 </form>
 ​

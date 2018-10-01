@@ -16,8 +16,8 @@ export class TrailCreateComponent implements OnInit {
  
   trailForm: FormGroup;
   parks: Park[];
-  isOpen: string [] = [ 'true','false'];
   trailDifficulty: string [] =['Easy', 'Moderate', 'Challenging'];
+  trailCondition: string [] = ['Open', 'Closed', 'Construction', 'Weather'];
 
   constructor(private _trailService: TrailService, private _form: FormBuilder, private _router: Router, private _parkService: ParkService) {
     this.createForm();
@@ -34,7 +34,7 @@ export class TrailCreateComponent implements OnInit {
       TrailName: new FormControl,
       TrailDistance: new FormControl,
       TrailDifficulty: new FormControl,
-      IsOpen: new FormControl,
+      TrailCondition: new FormControl,
       ParkID: new FormControl,
       ParkName: new FormControl
 
