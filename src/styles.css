@@ -41,4 +41,9 @@ h1{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 1em;
+}
+
+.container button{
+    margin-bottom: 2em;
 }

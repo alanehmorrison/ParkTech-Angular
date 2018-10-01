@@ -50,7 +50,7 @@ export class MyParkEditComponent implements OnInit {
 
   onSubmit(form){
     const updateMyPark: MyPark = {
-      MyParkID: form.value.MyParkID,
+      MyParkID: this.myPark.MyParkID,
       ParkID: form.value.ParkID,
       ParkName: form.value.ParkName,
       TrailID: form.value.TrailID,
