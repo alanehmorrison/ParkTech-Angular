@@ -1,5 +1,5 @@
 <h1>Edit My Park</h1>
-
+<div class="container">
 <div *ngIf="myPark" class="main-div">
     <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editMyParkForm">
     <div>
@@ -8,6 +8,7 @@
           <mat-select matInput placeholder="Park ID" formControlName="ParkID"  required>
             <mat-option *ngFor="let parkID of parks" >{{parkID.ParkID}}</mat-option>
           </mat-select>
+
           <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID"  >
         </mat-form-field>
       </div>
@@ -28,7 +29,10 @@
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="My Trail Status" formControlName="MyTrailStatus" type="MyTrailStatus"  >
+
+            <mat-select placeholder="My Trail Status" formControlName="MyTrailStatus" required>
+                <mat-option *ngFor="let trailStatus of trailStatus" [value]="trailStatus">{{trailStatus}}</mat-option>
+              </mat-select>
         </mat-form-field>
       </div>
       <div>
@@ -36,9 +40,5 @@
           <input matInput placeholder="Trail Comment" formControlName="TrailComment" type="TrailComment" >
         </mat-form-field>
       </div>
-    </div>
-    <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
-  </form>
 </div>
   ​
-<a mat-button class="nav-btn" routerLink="/mypark">Back to List</a>
