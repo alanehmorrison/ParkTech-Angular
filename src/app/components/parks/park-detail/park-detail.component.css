@@ -1,3 +1,9 @@
 .park-detail-lable{
     font-weight: bold;
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
