@@ -5,32 +5,35 @@
     <div>
       <div hidden>
         <mat-form-field>
-          <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID"  [value]="mypark.ParkID">
+          <mat-select matInput placeholder="Park ID" formControlName="ParkID"  required>
+            <mat-option *ngFor="let parkID of parks" >{{parkID.ParkID}}</mat-option>
+          </mat-select>
+          <input matInput placeholder="Park ID" formControlName="ParkID" type="ParkID"  >
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName"  [value]="mypark.ParkName">
+          <input matInput placeholder="Park Name" formControlName="ParkName" type="ParkName"  >
         </mat-form-field>
       </div>
       <div hidden>
         <mat-form-field>
-          <input matInput placeholder="Trail ID" formControlName="TrailID" type="TrailID"  [value]="myPark.TrailID">
+          <input matInput placeholder="Trail ID" formControlName="TrailID" type="TrailID"  >
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName"  [value]="mypark.TrailName">
+          <input matInput placeholder="Trail Name" formControlName="TrailName" type="TrailName"  >
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="My Trail Status" formControlName="MyTrailStatus" type="MyTrailStatus"  [value]="mypark.MyTrailStatus">
+          <input matInput placeholder="My Trail Status" formControlName="MyTrailStatus" type="MyTrailStatus"  >
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Trail Comment" formControlName="TrailComment" type="TrailComment"  [value]="mypark.TrailComment">
+          <input matInput placeholder="Trail Comment" formControlName="TrailComment" type="TrailComment" >
         </mat-form-field>
       </div>
     </div>
