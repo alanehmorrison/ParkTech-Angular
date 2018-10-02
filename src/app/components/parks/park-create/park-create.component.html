@@ -1,9 +1,7 @@
-
 <div class="container">
     <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="parkForm">
     <div class="main-div">
 <h1>Create a Park</h1>
-
         <div hidden>
           <mat-form-field>
             <input matInput placeholder="ParkID" formControlName="ParkID" type="ParkID" required/>
@@ -56,9 +54,8 @@
             <input matInput placeholder="Park Description" formControlName="ParkDescription" type="ParkDescription" required/>
           </mat-form-field>
         </div>
-        <br>
         <button mat-raised-button class="nav-btn" type="button" routerLink="/park" (click)="onSubmit()">Create Park</button>
-        <br>
+        &nbsp;
         <button mat-raised-button class="nav-btn" routerLink="/park">Back to Parks</button>
       </div>
     </form>
