@@ -1,5 +1,6 @@
 # Welcome to Parks and Tech!
-We built this project using an ASP.NET Api that can be found [here](https://parksandtech.azurewebsites.net/)
+We built this project using an ASP.NET Api that can be found [here](https://parksandtech.azurewebsites.net/).
+This project was built with a four person team of developers at [Eleven Fifty Academy](https://www.elevenfifty.org/) in Fishers. 
 
 # ParksTech
 
